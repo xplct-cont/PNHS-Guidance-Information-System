@@ -15,10 +15,10 @@ class AdminSeeder extends Seeder
     public function run()
     {
         User::create([
-            'name' => 'Kenn Secusana',
-            'email' => 'kennbassist@gmail.com',
+            'name' => 'Jasmin Secusana',
+            'email' => 'jasminsecusana38@gmail.com',
             'email_verified_at' => now(),
-            'password' => bcrypt('secusana123'),
+            'password' => bcrypt('jas_secusana123'),
             'admin' => 1,
             'approved_at' => now(),
             'contact_no' => '09361652609',
