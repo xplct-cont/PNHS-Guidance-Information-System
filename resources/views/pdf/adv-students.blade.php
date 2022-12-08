@@ -108,7 +108,7 @@
             @endforeach
         @else
             <tr>
-                <td colspan="3">No Grade 11 - Wisdom Students Found!</td>
+                <td colspan="3">No Students Found!</td>
             </tr>
 
         @endif

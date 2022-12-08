@@ -161,6 +161,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -238,6 +239,7 @@ return [
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Excel' => \MaatWebsite\Excel\Facades\Excel::class,
         'Chatify' => Chatify\Facades\ChatifyMessenger::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
 
     ],
 
