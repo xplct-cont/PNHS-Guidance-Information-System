@@ -35,13 +35,41 @@
         </li> --}}
 
         <div class="cardBox" style="margin-top:8px;">
+         
             <div class="card elevation-2">
                 <div class="iconBx">
-                    <ion-icon name="person"></ion-icon>
+                    <ion-icon name="people"></ion-icon>
                 </div>
                 <div>
-                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Administrator</div>
-                    <div class="numbers"><span>{{ $admin }}</span></div>
+                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Grade 7 Students</div>
+                    <div class="numbers"><span>{{$student7}}</span></div>
+                </div>
+            </div>
+            <div class="card elevation-2">
+                <div class="iconBx">
+                    <ion-icon name="people"></ion-icon>
+                </div>
+                <div>
+                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Grade 8 Students</div>
+                    <div class="numbers"><span>{{$student8}}</span></div>
+                </div>
+            </div>
+            <div class="card elevation-2">
+                <div class="iconBx">
+                    <ion-icon name="people"></ion-icon>
+                </div>
+                <div>
+                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Grade 9 Students</div>
+                    <div class="numbers"><span>{{$student9}}</span></div>
+                </div>
+            </div>
+            <div class="card elevation-2">
+                <div class="iconBx">
+                    <ion-icon name="people"></ion-icon>
+                </div>
+                <div>
+                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Grade 10 Students</div>
+                    <div class="numbers"><span>{{$student10}}</span></div>
                 </div>
             </div>
             <div class="card elevation-2">
@@ -62,7 +90,15 @@
                     <div class="numbers">{{ $student12 }}</div>
                 </div>
             </div>
-
+            <div class="card elevation-2">
+                <div class="iconBx">
+                    <ion-icon name="person"></ion-icon>
+                </div>
+                <div>
+                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Administrator</div>
+                    <div class="numbers"><span>{{ $admin }}</span></div>
+                </div>
+            </div>
             <div class="card elevation-2 bg-info">
                 <div class="iconBx">
                     <ion-icon name="person-add" class="text-light"></ion-icon>
