@@ -41,12 +41,9 @@ class HomeController extends Controller
         $user = DB::table('users')->whereNotNull('approved_at')->count();   
         $admin = DB::table('users')->where('admin', '1')->count();
 
-        $student11 = DB::table('students')->where('year_section', 'Grade 11 - Wisdom')
-        ->orWhere('year_section', 'Grade 11 - Charity')
-        ->orWhere('year_section', 'Grade 11 - Faith')->count();
+        $student11 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 11%')->count();
 
-        $student12 = DB::table('students')->where('year_section', 'Grade 12 - Hope')
-        ->orWhere('year_section', 'Grade 12 - Love')->count();
+        $student12 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 12%')->count();
 
         $adviser = User::whereNotNull('approved_at')->get()->sortBy('advisory');  
         $adviser = User::where([
