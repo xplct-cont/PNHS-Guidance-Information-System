@@ -4,18 +4,23 @@
 <div class="p-3">
     <a class="fas fa-arrow-left" style="font-size:20px; color:blue;" href="{{ url('show-student/' . $student_wis->id . '/parent_conference_record') }}"></a>
 </div>
-    <div class="d-flex justify-content-center mb-3">
-        <h1 class="text-dark text-center" style="font-size: 25px;">Create Parent/Guardian Conference Record</h1>
-    </div>
+<div class="row d-flex justify-content-center text-dark">
+    <div class="col-md-9 elevation-1 p-3 mb-3 rounded bg-light">
+        <div class="mx-auto text-center mb-3">
+            <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
+                style="width: 130px; height:130px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
 
-    <div class="row d-flex justify-content-center text-dark">
-        <div class="col-md-11 elevation-1 p-3 mb-3 rounded bg-light">
-            @if ($message = Session::get('status'))
-                <div class="alert alert-success alert-block">
-                    <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
-                    <strong>{{ $message }}</strong>
-                </div>
-            @endif
+        </div>
+
+        <div class="row d-flex justify-content-center text-dark">
+            <h1 class="text-dark text-center" style="font-size: 25px;">Parent/Guardian Conference Record</h1>
+        </div>
+                @if ($message = Session::get('status'))
+                    <div class="alert alert-success alert-dismissible fade show mt-2" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
+                        <strong>{{ $message }}</strong>
+                    </div>
+                @endif
             <div class="container mb-0">
                 <form action="{{ url('/add_parent_conference_record') }}" method="POST">
                     @csrf
@@ -208,4 +213,10 @@
         </div>
     </div>
     </div>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
+
 @endsection

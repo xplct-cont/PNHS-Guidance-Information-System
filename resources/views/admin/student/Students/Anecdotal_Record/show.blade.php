@@ -5,12 +5,14 @@
         <a class="fas fa-arrow-left" style="font-size:20px; color:blue;"
             href="{{ url('show-student/' . $student_wisd->student->id . '/anecdotal_record') }}"></a>
     </div>
-    @if ($message = Session::get('status'))
-        <div class="alert alert-success alert-block">
-            <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
-            <strong>{{ $message }}</strong>
-        </div>
-    @endif
+           
+  @if ($message = Session::get('status'))
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
+      <strong>{{ $message }}</strong>
+  </div>
+@endif
+
 
     <div class="row d-flex justify-content-center text-dark">
         <div class="col-md-9 elevation-4 p-3 rounded  mt-3 bg-light mb-3">
@@ -121,4 +123,10 @@
         </div>
     </div>
     </div>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
+
 @endsection
