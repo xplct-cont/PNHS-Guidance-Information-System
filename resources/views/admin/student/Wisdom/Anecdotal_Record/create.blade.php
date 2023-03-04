@@ -1,15 +1,20 @@
 @extends('layouts.layoutsidebar')
 
 @section('content')
-<div class="p-3">
-    <a class="fas fa-arrow-left" style="font-size:20px; color:blue;" href="{{ url('show-student/' . $student_wis->id . '/anecdotal_record') }}"></a>
-</div>
-    <div class="d-flex justify-content-center mb-3">
-        <h1 class="text-dark text-center" style="font-size: 25px;">Create Anecdotal Record</h1>
+    <div class="p-3">
+        <a class="fas fa-arrow-left" style="font-size:20px; color:blue;"
+            href="{{ url('show-student/' . $student_wis->id . '/anecdotal_record') }}"></a>
     </div>
-
     <div class="row d-flex justify-content-center text-dark">
-        <div class="col-md-11 elevation-1 p-3 mb-3 rounded bg-light">
+        <div class="col-md-9 elevation-1 p-3 mb-3 rounded bg-light">
+            <div class="mx-auto text-center mb-3">
+                <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
+                    style="width: 130px; height:130px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
+
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <h1 class="text-dark text-center" style="font-size: 25px;">Anecdotal Record</h1>
+            </div>
             @if ($message = Session::get('status'))
                 <div class="alert alert-success alert-block">
                     <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>

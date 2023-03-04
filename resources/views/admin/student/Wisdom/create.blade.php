@@ -2,15 +2,19 @@
 
 @section('content')
 <a href="{{url('/advisory-list/'.$adviser->id)}}"><span class="fas fa-arrow-left" style="font-size: 20px;"></span> </a>
-    <div class="card-header col-md-10 mx-auto mb-5 elevation-1" style="position: relative; top: 30px;">
-        <h1
-            style="position: absolute; left:35%; color:whitesmoke; margin:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; color:dimgray;">
-            Add {{$adviser->advisory}}</h1>
-        <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
-            style="width: 40px; height:40px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
-    </div>
+    
+        <div class="mx-auto text-center mb-3">
+            <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
+            style="width: 130px; height:130px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
+       
+            <h1 class="mb-3 mt-3"
+            style="color:whitesmoke; margin:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px; color:dimgray;">
+            Add {{$adviser->advisory}} Student</h1>
+        </div>
+
+
     <div class="row d-flex justify-content-center text-dark">
-        <div class="col-md-11 elevation-1 p-3 rounded bg-light">
+        <div class="col-md-12 p-3 rounded bg-light">
             @if ($message = Session::get('status'))
             <div class="alert alert-success alert-block">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
@@ -18,7 +22,7 @@
             </div>
             @endif
             
-            <div class="container mb-0">
+            <div class="container ">
                 <form action="{{ url('/add-new-student') }}" method="POST">
                     @csrf
 
