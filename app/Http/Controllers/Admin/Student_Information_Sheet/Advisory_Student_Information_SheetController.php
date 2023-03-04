@@ -40,7 +40,7 @@ class Advisory_Student_Information_SheetController extends Controller
         
   
         $student_wis = Student::find($id);
-        return view('admin.student.Wisdom.Student_Information_Sheet.index', compact('student_information_sheet_wisdom', 'student_wis'));
+        return view('admin.student.Students.Student_Information_Sheet.index', compact('student_information_sheet_wisdom', 'student_wis'));
       }
 
 
@@ -120,13 +120,6 @@ class Advisory_Student_Information_SheetController extends Controller
         //SIGNED
         $sheet->date_signed = $request->input('date_signed');
 
-
-        // if($request->hasFile('student_image')){
-        //     $file = $request->file('student_image');
-        //     $filename = time() . '.' . $file->getClientOriginalExtension();
-        //     Image::make($file)->save(storage_path('/app/public/student_information_sheet/' . $filename));
-
-        //     $sheet->student_image= $filename;
             $sheet->save();
 
         
@@ -135,10 +128,7 @@ class Advisory_Student_Information_SheetController extends Controller
     }
     public function destroy($id){
         $removeRec = Student_Information_Sheet::findOrFail($id);
-        // $destination = 'storage/student_information_sheet/'.$removeRec->student_image;
-        // if(File::exists($destination)){
-        //     File::delete($destination);
-        // }
+       
         $removeRec -> delete();
         return redirect()->back()->with('status', 'Record Deleted Successfully!');   
       }

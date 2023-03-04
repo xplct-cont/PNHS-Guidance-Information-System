@@ -39,7 +39,7 @@ class Advisory_Personality_Test_ResultController extends Controller
         
   
         $student_wis = Student::find($id);
-        return view('admin.student.Wisdom.Personality_Test_Result.index', compact('personality_test_result_wisdom', 'student_wis'));
+        return view('admin.student.Students.Personality_Test_Result.index', compact('personality_test_result_wisdom', 'student_wis'));
       }
   
       public function store(Request $request){

@@ -37,7 +37,7 @@ class Advisory_Career_Interest_Test_ResultController extends Controller
       
     
       $student_wis = Student::find($id);
-      return view('admin.student.Wisdom.Career_Interest_Test_Result.index', compact('career_interest_test_result_wisdom', 'student_wis'));
+      return view('admin.student.Students.Career_Interest_Test_Result.index', compact('career_interest_test_result_wisdom', 'student_wis'));
     }
 
     public function store(Request $request){

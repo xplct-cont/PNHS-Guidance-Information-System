@@ -36,7 +36,7 @@ class Advisory_Parent_Conference_RecordController extends Controller
         $parent_conference_record_wisdom = Parent_Conference_Record::with(['student'])->where('student_id', '=', $id)->get();
         
         $student_wis = Student::find($id);
-        return view('admin.student.Wisdom.Parent_Conference_Record.index', compact('parent_conference_record_wisdom', 'student_wis'));
+        return view('admin.student.Students.Parent_Conference_Record.index', compact('parent_conference_record_wisdom', 'student_wis'));
       }
 
       public function show(Student $id, $student){
@@ -55,7 +55,7 @@ class Advisory_Parent_Conference_RecordController extends Controller
           abort(404);
       } 
 
-        return view('admin.student.Wisdom.Parent_Conference_Record.show', compact( 'student_wisd'))->with('student_w', $student_w);
+        return view('admin.student.Students.Parent_Conference_Record.show', compact( 'student_wisd'))->with('student_w', $student_w);
     }
 
     public function create($id) {
@@ -64,7 +64,7 @@ class Advisory_Parent_Conference_RecordController extends Controller
       
       $student_wis = Student::find($id);
 
-      return view('admin.student.Wisdom.Parent_Conference_Record.create', compact('parent_conference_record_wisdom', 'student_wis'));
+      return view('admin.student.Students.Parent_Conference_Record.create', compact('parent_conference_record_wisdom', 'student_wis'));
   }
 
     

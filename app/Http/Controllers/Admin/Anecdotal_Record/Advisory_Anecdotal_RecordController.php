@@ -34,7 +34,7 @@ class Advisory_Anecdotal_RecordController extends Controller
       
 
       $student_wis = Student::find($id);
-      return view('admin.student.Wisdom.Anecdotal_Record.index', compact('anecdotal_wisdom', 'student_wis'));
+      return view('admin.student.Students.Anecdotal_Record.index', compact('anecdotal_wisdom', 'student_wis'));
     }
 
 
@@ -54,24 +54,10 @@ class Advisory_Anecdotal_RecordController extends Controller
           abort(404);
       } 
 
-        return view('admin.student.Wisdom.Anecdotal_Record.show', compact( 'student_wisd'))->with('student_w', $student_w);
+        return view('admin.student.Students.Anecdotal_Record.show', compact( 'student_wisd'))->with('student_w', $student_w);
 
     }
 
-
-    // public function update(Request $request, $wis){
-       
-    //     $student_wisd_update = Anecdotal_Record::find($wis);
-        
-    //     $student_wisd_update->observation_date_time = $request->input('observation_date_time');
-    //     $student_wisd_update->description_of_incident = $request->input('description_of_incident');
-    //     $student_wisd_update->location_of_incident = $request->input('location_of_incident');
-    //     $student_wisd_update->action_taken = $request->input('action_taken');
-    //     $student_wisd_update->recommendations = $request->input('recommendations');
-
-    //     $student_wisd_update->update();
-    //     return redirect()->back()->with('status', 'Student Updated Successfully!');
-    // }
 
 
     public function create($id) {
@@ -80,7 +66,7 @@ class Advisory_Anecdotal_RecordController extends Controller
         
         $student_wis = Student::find($id);
 
-        return view('admin.student.Wisdom.Anecdotal_Record.create', compact('anecdotal_wisdom', 'student_wis'));
+        return view('admin.student.Students.Anecdotal_Record.create', compact('anecdotal_wisdom', 'student_wis'));
     }
 
 

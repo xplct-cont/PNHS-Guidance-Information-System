@@ -35,7 +35,7 @@ class Advisory_Counseling_Anecdotal_RecordController extends Controller
       
 
       $student_wis = Student::find($id);
-      return view('admin.student.Wisdom.Counseling_Anecdotal_Record.index', compact('counseling_anecdotal_wisdom', 'student_wis'));
+      return view('admin.student.Students.Counseling_Anecdotal_Record.index', compact('counseling_anecdotal_wisdom', 'student_wis'));
     }
 
 
@@ -45,7 +45,7 @@ class Advisory_Counseling_Anecdotal_RecordController extends Controller
       
       $student_wis = Student::find($id);
 
-      return view('admin.student.Wisdom.Counseling_Anecdotal_Record.create', compact('counseling_anecdotal_wisdom', 'student_wis'));
+      return view('admin.student.Students.Counseling_Anecdotal_Record.create', compact('counseling_anecdotal_wisdom', 'student_wis'));
   }
 
 
@@ -100,7 +100,7 @@ class Advisory_Counseling_Anecdotal_RecordController extends Controller
         abort(404);
     } 
   
-      return view('admin.student.Wisdom.Counseling_Anecdotal_Record.show', compact( 'student_wisd'))->with('student_w', $student_w);
+      return view('admin.student.Students.Counseling_Anecdotal_Record.show', compact( 'student_wisd'))->with('student_w', $student_w);
   }
 
       public function update(Request $request, $id){

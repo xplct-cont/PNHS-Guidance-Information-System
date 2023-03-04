@@ -53,21 +53,21 @@ class AdvisoryStudentController extends Controller
     ->paginate(15);
 
 
-       return view('admin.student.Wisdom.index',compact('advStudents', 'advstudent','adviser'),['advStudents'=>$advStudents])
+       return view('admin.student.Students.index',compact('advStudents', 'advstudent','adviser'),['advStudents'=>$advStudents])
        ->with('i',(request()->input('page',1)-1)*5);
     }
 
 
     public function edit(User $id,$student){
         $advisoryStud = Student::find($student);
-        return view('admin.student.Wisdom.edit', compact('advisoryStud'));
+        return view('admin.student.Students.edit', compact('advisoryStud'));
     }
 
     public function create($id) {
         
         $adviser = User::find($id);
         $Adviser = DB::table('users')->where('id','=', $id)->get();
-        return view('admin.student.Wisdom.create', compact('Adviser','adviser'));
+        return view('admin.student.Students.create', compact('Adviser','adviser'));
        
     }
 
@@ -163,7 +163,7 @@ class AdvisoryStudentController extends Controller
            return redirect()->back();
        }
 
-       return view('admin.student.Wisdom.show')->with('wisdomStud', $wisdomStud);
+       return view('admin.student.Students.show')->with('wisdomStud', $wisdomStud);
     }
 
 
