@@ -19,12 +19,12 @@ class CreateCounselingAnecdotalRecords extends Migration
             $table->dateTime('date_time_called')->nullable();
             $table->string('reasons_for_contact')->nullable();
             $table->string('referred_by')->nullable();
-            $table->string('reasons_for_referral')->nullable();
-            $table->string('follow_up_counseling_session')->nullable();
-            $table->string('behavior_observed')->nullable();
-            $table->string('interview_findings')->nullable();
-            $table->string('clinical_impressions')->nullable();
-            $table->string('recommendation')->nullable();
+            $table->longText('reasons_for_referral')->nullable();
+            $table->longText('follow_up_counseling_session')->nullable();
+            $table->longText('behavior_observed')->nullable();
+            $table->longText('interview_findings')->nullable();
+            $table->longText('clinical_impressions')->nullable();
+            $table->longText('recommendation')->nullable();
             $table->timestamps();
 
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');

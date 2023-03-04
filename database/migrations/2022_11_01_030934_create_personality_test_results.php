@@ -16,7 +16,7 @@ class CreatePersonalityTestResults extends Migration
         Schema::create('personality_test_results', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('student_id')->unsigned();
-            $table->string('personality_result')->nullable();
+            $table->longText('personality_result')->nullable();
             $table->timestamps();
 
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');

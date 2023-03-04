@@ -46,7 +46,7 @@
         <i class="fas fa-address-book fa-pull-left fa-md text-white"></i>
     </a>
 </li>
-
+{{-- 
 @php
 $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('seen' , false)->count();
 @endphp
@@ -57,7 +57,7 @@ $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('se
         <i class="fas fa-inbox fa-pull-left fa-md text-white"></i>
     </a>
 </li>
-
+ --}}
 
 
 @php

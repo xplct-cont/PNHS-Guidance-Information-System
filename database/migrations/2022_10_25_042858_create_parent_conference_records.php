@@ -20,9 +20,9 @@ class CreateParentConferenceRecords extends Migration
             $table->string('relation_to_student')->nullable();
             $table->string('reason_for_contact')->nullable();
             $table->string('inquiries_referral_appointment')->nullable();
-            $table->string('problem_concern')->nullable();
-            $table->string('topics_discussed')->nullable();
-            $table->string('suggested_resolution')->nullable();
+            $table->longText('problem_concern')->nullable();
+            $table->longText('topics_discussed')->nullable();
+            $table->longText('suggested_resolution')->nullable();
             $table->string('action_taken')->nullable();
             $table->timestamps();
 

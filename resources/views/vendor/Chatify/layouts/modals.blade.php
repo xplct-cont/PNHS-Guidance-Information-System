@@ -46,10 +46,10 @@
                         style="width: 150px;  height:150 px;border-radius: 50%; "></div> --}}
 
                       <p class="upload-avatar-details"></p>
-                      <label class="app-btn a-btn-primary update" style="background-color:{{$messengerColor}}">
+                      {{-- <label class="app-btn a-btn-primary update" style="background-color:{{$messengerColor}}">
                           Change Profile
                           <input class="upload-avatar chatify-d-none" accept="image/*" name="avatar" type="file" />
-                      </label>
+                      </label> --}}
                       {{-- Dark/Light Mode  --}}
                       <p class="divider"></p>
                       <p class="app-modal-header">Dark Mode <span class="

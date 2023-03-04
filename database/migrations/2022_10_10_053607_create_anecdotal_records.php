@@ -17,10 +17,10 @@ class CreateAnecdotalRecords extends Migration
             $table->id();
             $table->bigInteger('student_id')->unsigned();
             $table->dateTime('observation_date_time')->nullable();
-            $table->string('description_of_incident')->nullable();
-            $table->string('location_of_incidents')->nullable();
-            $table->string('actions_taken')->nullable();
-            $table->string('recommendations')->nullable();
+            $table->longText('description_of_incident')->nullable();
+            $table->longText('location_of_incidents')->nullable();
+            $table->longText('actions_taken')->nullable();
+            $table->longText('recommendations')->nullable();
             $table->timestamps();
 
 

@@ -16,7 +16,7 @@ class CreateCareerInterestTestResults extends Migration
         Schema::create('career_interest_test_results', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('student_id')->unsigned();
-            $table->string('interest_result')->nullable();
+            $table->longText('interest_result')->nullable();
             $table->timestamps();
 
             $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');

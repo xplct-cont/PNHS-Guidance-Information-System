@@ -25,8 +25,8 @@ class CreateCaseReports extends Migration
             $table->string('resp_grade_section')->nullable();
             $table->string('resp_sex')->nullable();
             $table->string('nature_of_complaint')->nullable();
-            $table->string('actions_taken')->nullable();
-            $table->string('recommendations')->nullable();
+            $table->longText('actions_taken')->nullable();
+            $table->longText('recommendations')->nullable();
 
             $table->timestamps();
 

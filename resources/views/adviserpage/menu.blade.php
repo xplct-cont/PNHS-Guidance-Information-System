@@ -34,7 +34,7 @@
     </a>
 </li>
 
-@php
+{{-- @php
    $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('seen' , false)->count();
 @endphp
 
@@ -43,7 +43,7 @@
         <p class="text-white">Chats <span class="badge badge-danger badge-counter">+{{$bells}}</span></p>
         <i class="fas fa-inbox fa-pull-left fa-md text-white"></i>
     </a>
-</li>
+</li> --}}
 
 
 
