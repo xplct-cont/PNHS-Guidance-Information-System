@@ -56,7 +56,7 @@ class Advisory_Personality_Test_ResultController extends Controller
               $result->save();
   
           }
-          return redirect()->back()->with('status', 'Record uploaded successfully!');
+          return redirect()->back()->with('status', 'Added Successfully!');
   
       }
   
@@ -67,7 +67,7 @@ class Advisory_Personality_Test_ResultController extends Controller
               File::delete($destination);
           }
           $removeRec -> delete();
-          return redirect()->back()->with('status', 'Record Deleted Successfully!');   
+          return redirect()->back()->with('status', 'Deleted Successfully!');   
         }
   
   

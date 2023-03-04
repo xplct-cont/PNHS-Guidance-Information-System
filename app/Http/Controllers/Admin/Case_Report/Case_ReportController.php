@@ -40,7 +40,7 @@ class Case_ReportController extends Controller
         $reports->recommendations = $request->input('recommendations');
         $reports->save();
 
-        return redirect()->back()->with('status', 'New Case created successfully!');
+        return redirect()->back()->with('status', 'Added Successfully!');
 
     }
 
@@ -72,7 +72,7 @@ class Case_ReportController extends Controller
 
         $reports->update();
 
-        return redirect()->back()->with('status', 'New Case updated successfully!');
+        return redirect()->back()->with('status', 'Updated Successfully!');
 
     }
 
@@ -80,7 +80,7 @@ class Case_ReportController extends Controller
     public function destroy($id){
         $removeCase = Case_Report::findOrFail($id);
         $removeCase -> delete();
-        return redirect()->back()->with('status', 'Case Deleted Successfully!');   
+        return redirect()->back()->with('status', 'Deleted Successfully!');   
       }
 
       public function export_allCases_pdf(){

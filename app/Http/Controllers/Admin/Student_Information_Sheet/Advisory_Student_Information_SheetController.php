@@ -123,14 +123,14 @@ class Advisory_Student_Information_SheetController extends Controller
             $sheet->save();
 
         
-        return redirect()->back()->with('status', 'Record uploaded successfully!');
+        return redirect()->back()->with('status', 'Added Successfully!');
 
     }
     public function destroy($id){
         $removeRec = Student_Information_Sheet::findOrFail($id);
        
         $removeRec -> delete();
-        return redirect()->back()->with('status', 'Record Deleted Successfully!');   
+        return redirect()->back()->with('status', 'Deleted Successfully!');   
       }
 
       
@@ -220,7 +220,7 @@ class Advisory_Student_Information_SheetController extends Controller
         $wisdomStudents->date_signed = $request->input('date_signed');
     
         $wisdomStudents->update();
-        return redirect()->back()->with('status', 'Information Updated Successfully!');
+        return redirect()->back()->with('status', 'Updated Successfully!');
     }
 
 }

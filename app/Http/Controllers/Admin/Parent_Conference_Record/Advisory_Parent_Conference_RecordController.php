@@ -96,7 +96,7 @@ class Advisory_Parent_Conference_RecordController extends Controller
           'action_taken' => $request->action_taken
          
       ]);
-      return redirect()->back()->with('status','Added New Record!');
+      return redirect()->back()->with('status','Added Successfully!');
   }
 
 
@@ -113,13 +113,13 @@ class Advisory_Parent_Conference_RecordController extends Controller
         $student_wis->action_taken = $request->input('action_taken');
 
         $student_wis->update();
-        return redirect()->back()->with('status', 'Record Updated Successfully!');
+        return redirect()->back()->with('status', 'Updated Successfully!');
     }
 
     public function destroy($id){
         $removeRec = Parent_Conference_Record::findOrFail($id);
         $removeRec -> delete();
-        return redirect()->back()->with('status', 'Record Deleted Successfully!');   
+        return redirect()->back()->with('status', 'Deleted Successfully!');   
       }
 
       public function export_advStudents_Parent_Conference_Record_ID_pdf(Request $request, $id){

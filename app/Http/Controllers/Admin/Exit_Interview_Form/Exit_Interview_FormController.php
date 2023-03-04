@@ -50,7 +50,7 @@ class Exit_Interview_FormController extends Controller
         $exit_forms->date_2 = $request->input('date_2');
         $exit_forms->save();
 
-        return redirect()->back()->with('status', 'Created new form successfully!');
+        return redirect()->back()->with('status', 'Added Successfully!');
 
     }
 
@@ -71,7 +71,7 @@ class Exit_Interview_FormController extends Controller
 
         $exit_forms->update();
 
-        return redirect()->back()->with('status', 'Form updated successfully!');
+        return redirect()->back()->with('status', 'Updated Successfully!');
 
     }
 
@@ -79,7 +79,7 @@ class Exit_Interview_FormController extends Controller
     public function destroy($id){
         $removeForms = Exit_Interview_Form::findOrFail($id);
         $removeForms -> delete();
-        return redirect()->back()->with('status', 'Form Deleted Successfully!');   
+        return redirect()->back()->with('status', 'Deleted Successfully!');   
       }
 
      

@@ -92,7 +92,7 @@ class Advisory_Anecdotal_RecordController extends Controller
             'recommendations' => $request->recommendations,
            
         ]);
-        return redirect()->back()->with('status','Added New Record!');
+        return redirect()->back()->with('status','Added Successfully!');
     }
 
     public function update(Request $request, $id){
@@ -105,13 +105,13 @@ class Advisory_Anecdotal_RecordController extends Controller
         $student_wis->recommendations = $request->input('recommendations');
 
         $student_wis->update();
-        return redirect()->back()->with('status', 'Information Updated Successfully!');
+        return redirect()->back()->with('status', 'Updated Successfully!');
     }
 
     public function destroy($id){
         $removeRec = Anecdotal_Record::findOrFail($id);
         $removeRec -> delete();
-        return redirect()->back()->with('status', 'Record Deleted Successfully!');   
+        return redirect()->back()->with('status', 'Deleted Successfully!');   
       }    
 
       public function export_advStudents_Anecdotal_ID_pdf(Request $request, $id){
