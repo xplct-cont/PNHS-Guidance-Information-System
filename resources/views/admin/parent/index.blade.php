@@ -1,6 +1,11 @@
 @extends('layouts.layoutsidebar')
 
 @section('content')
+<div class="d-flex justify-content-center">
+    <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
+        style="width: 120px; height:120px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
+</div>
+
     <h1 class="text-dark p-2 text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px;">Senior
         High School List of Parents/Guardian</h1>
     <div class="div d-flex justify-content-end" style="position:relative; top: -10px;">
@@ -36,11 +41,7 @@
                 </div>
             </form>
         </div>
-
-
         <hr>
-
-
         <div class="container col-md-10">
             <div class="d-flex justify-content-center">
                 <table class="table table-sm text-dark table-borderless table-hover">

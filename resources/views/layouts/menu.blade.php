@@ -41,7 +41,8 @@
 </li>
 
 <li class="nav-item ">
-    <a href="{{ route('exit_interview_forms') }}" class="nav-link {{ Request::is('exit_interview_forms') ? 'bg-info active' : '' }}">
+    <a href="{{ route('exit_interview_forms') }}"
+        class="nav-link {{ Request::is('exit_interview_forms') ? 'bg-info active' : '' }}">
         <p class="text-white">Exit Interview Forms</p>
         <i class="fas fa-address-book fa-pull-left fa-md text-white"></i>
     </a>
@@ -60,16 +61,23 @@ $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('se
  --}}
 
 @php
-    $advisers = DB::table('users')->where('approved_at', '!=', null)->orderBy('advisory', 'asc')->get();
+    $advisers = DB::table('users')
+        ->where('approved_at', '!=', null)
+        ->orderBy('advisory', 'asc')
+        ->get();
 @endphp
-<div class="text-white text-center " style="padding:5px; font-size:15px; background-color:rgb(76, 76, 76);">All Sections</div>
+<div class="text-white text-center " style="padding:5px; font-size:15px; background-color:rgb(76, 76, 76);">All Sections
+</div>
 <table class="table table-sm table-borderless">
     <tbody>
         @foreach ($advisers as $teachers)
-        <tr>
-            <td class="text-light" ><a class="text-light" style="margin-left: -15px;" href="{{ url('advisory-list/' . $teachers->id) }}">{{$teachers->advisory}} <i class="fas fa-user-friends fa-pull-left fa-md " style="margin-left: 10px; margin-right: 25px;"></i></a></td>
-           
-        </tr>
+            <tr>
+                <td class="text-light"><a class="text-light" style="margin-left: -15px;"
+                        href="{{ url('advisory-list/' . $teachers->id) }}">{{ $teachers->advisory }} <i
+                            class="fas fa-user-friends fa-pull-left fa-md "
+                            style="margin-left: 10px; margin-right: 25px;"></i></a></td>
+
+            </tr>
         @endforeach
     </tbody>
 </table>

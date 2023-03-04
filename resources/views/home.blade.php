@@ -109,16 +109,16 @@
                     </div>
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
-                        <div class="small-box bg-light text-secondary elevation-4">
+                        <div class="small-box bg-info text-light elevation-4">
                             <div class="inner">
                                 <h3>{{ $exit_forms }}</h3>
 
-                                <p class="text-secondary">Exit Forms</p>
+                                <p class="text-light">Exit Forms</p>
                             </div>
                             <div class="icon">
-                                <i class="fas fa-address-book text-secondary"></i>
+                                <i class="fas fa-address-book text-light"></i>
                             </div>
-                            <a href="#" class="small-box-footer bg-info text-light"><span
+                            <a href="#" class="small-box-footer bg-secondary text-light"><span
                                     class="text-light"></span></a>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                 </div>
             </div>
         </section>
-
+     
         <div class="card d-flex justify-content-end col-md-12" style="padding:3px;">
 
             <h2 style="color: dimgray; font-size:20px;" class="d-flex justify-content-between mb-3 mt-2 ">SHS ADVISERS
