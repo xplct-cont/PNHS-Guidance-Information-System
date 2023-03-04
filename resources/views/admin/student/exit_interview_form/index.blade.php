@@ -211,15 +211,9 @@
 
                     <div class="col-md-9 elevation-4 p-3 rounded  mt-5 bg-light mb-3">
 
-                        {{--                         
-                        <a href="{{ url('delete_student_exit_form/' . $forms->id) }}"
-                            class="btn btn-sm btn-danger mb-1"><i class="text-light fas fa-trash"></i></a> --}}
-
                         <a href="#" data-toggle="modal" id="exit_forms_delete_link" class="btn btn-danger btn-sm"
                             data-target="#exit_forms_id{{ $forms->id }}"><span
                                 class=" fas fa-trash-alt text-light"></span></a>
-
-
 
 
                         <div class="d-flex justify-content-end">

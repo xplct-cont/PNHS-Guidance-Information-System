@@ -13,7 +13,7 @@
     @endif
 
     <div class="row d-flex justify-content-center text-dark">
-        <div class="col-md-9 elevation-4 p-3 rounded  mt-5 bg-light mb-3">
+        <div class="col-md-9 elevation-4 p-3 rounded  mt-3 bg-light mb-3">
 
             <div class="d-flex justify-content-end">
 

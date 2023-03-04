@@ -16,7 +16,7 @@
                 <h1 class="text-dark text-center" style="font-size: 25px;">Anecdotal Record</h1>
             </div>
             @if ($message = Session::get('status'))
-                <div class="alert alert-success alert-block">
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
                     <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
                     <strong>{{ $message }}</strong>
                 </div>
@@ -109,4 +109,9 @@
         </div>
     </div>
     </div>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection
