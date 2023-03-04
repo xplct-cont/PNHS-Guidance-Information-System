@@ -27,45 +27,115 @@
             DASHBOARD</h1>
 
 
-        <div class="cardBox" style="margin-top:8px;">
+            <section class="content mt-5">
+                <div class="container-fluid">
+                    <!-- Small boxes (Stat box) -->
+                    <div class="row">
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-light text-secondary elevation-4">
+                                <div class="inner">
+                                    <h3>{{ $student11 }}</h3>
+        
+                                    <p class="text-secondary">Grade 11 Students</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-users text-secondary"></i>
+                                </div>
+                                <a href="#" class="small-box-footer bg-info text-light"><span
+                                        class="text-light"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-light text-secondary elevation-4">
+                                <div class="inner">
+                                    <h3>{{ $student12 }}</h3>
+        
+                                    <p class="text-secondary">Grade 12 Students</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-users text-secondary"></i>
+                                </div>
+                                <a href="#" class="small-box-footer bg-info text-light"><span
+                                        class="text-light"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-light text-secondary elevation-4">
+                                <div class="inner">
+                                    <h3>{{ $admin }}</h3>
+        
+                                    <p class="text-secondary">Administrator</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-user-cog text-secondary"></i>
+                                </div>
+                                <a href="#" class="small-box-footer bg-info text-light"><span
+                                        class="text-light"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-light text-secondary elevation-4">
+                                <div class="inner">
+                                    <h3>{{ $user }}</h3>
+        
+                                    <p class="text-secondary">Advisers</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-user-tie text-secondary"></i>
+                                </div>
+                                <a href="#" class="small-box-footer bg-info text-light"><span
+                                        class="text-light"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-light text-secondary elevation-4">
+                                <div class="inner">
+                                    <h3>{{ $case_reports }}</h3>
+        
+                                    <p class="text-secondary">Case Reports</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-book-open text-secondary"></i>
+                                </div>
+                                <a href="#" class="small-box-footer bg-info text-light"><span
+                                        class="text-light"></span></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small box -->
+                            <div class="small-box bg-light text-secondary elevation-4">
+                                <div class="inner">
+                                    <h3>{{ $exit_forms }}</h3>
+        
+                                    <p class="text-secondary">Exit Forms</p>
+                                </div>
+                                <div class="icon">
+                                    <i class="fas fa-address-book text-secondary"></i>
+                                </div>
+                                <a href="#" class="small-box-footer bg-info text-light"><span
+                                        class="text-light"></span></a>
+                            </div>
+                        </div>
 
-            <div class="card elevation-2">
-                <div class="iconBx">
-                    <ion-icon name="people"></ion-icon>
+                    </div>
                 </div>
-                <div>
-                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Grade 11 Students</div>
-                    <div class="numbers"><span>{{ $student11 }}</span></div>
-                </div>
-            </div>
-            <div class="card elevation-2">
-                <div class="iconBx">
-                    <ion-icon name="people"></ion-icon>
-                </div>
-                <div>
-                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Grade 12 Students</div>
-                    <div class="numbers">{{ $student12 }}</div>
-                </div>
-            </div>
-            <div class="card elevation-2">
-                <div class="iconBx">
-                    <ion-icon name="person"></ion-icon>
-                </div>
-                <div>
-                    <div class="cardName d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Administrator</div>
-                    <div class="numbers"><span>{{ $admin }}</span></div>
-                </div>
-            </div>
-            <div class="card elevation-2 bg-info">
-                <div class="iconBx">
-                    <ion-icon name="person-add" class="text-light"></ion-icon>
-                </div>
-                <div>
-                    <div class="cardName text-light d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">Adviser</div>
-                    <div class="numbers text-light"><span>{{ $user }}</span></div>
-                </div>
-            </div>
-        </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
 
 
 

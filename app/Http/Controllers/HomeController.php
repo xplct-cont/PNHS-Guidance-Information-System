@@ -40,13 +40,12 @@ class HomeController extends Controller
         $meetings = DB::table('meetings')->get();
         $user = DB::table('users')->whereNotNull('approved_at')->count();   
         $admin = DB::table('users')->where('admin', '1')->count();
-
-        // $student7 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 7%')->count();
-        // $student8 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 8%')->count();
-        // $student9 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 9%')->count();
-        // $student10 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 10%')->count();
         $student11 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 11%')->count();
         $student12 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 12%')->count();
+        $case_reports = DB::table('case_reports')->count();
+        $exit_forms = DB::table('exit_forms')->count();
+
+
 
         $adviser = User::whereNotNull('approved_at')->get()->sortBy('advisory');  
         $adviser = User::where([
@@ -60,34 +59,10 @@ class HomeController extends Controller
             ])
         
             ->orderBy("advisory","asc")
-            ->paginate(3);  
+            ->paginate(6);  
 
-        return view('home', compact('meetings', 'admin', 'student11', 'user', 'adviser', 'student12'),
+        return view('home', compact('meetings', 'admin', 'student11', 'user', 'adviser', 'student12', 'case_reports', 'exit_forms'),
         ['adviser' => $adviser])->with('i',(request()->input('page',1)-1)*5);
-
-    //    $meetings = DB::table('meetings')->get();
-    //    
-     
-
-    // //    $tests = DB::table('users')->join('students', 'users.id', '=', 'user_id')->count();
-      
-    //    $section = DB::table('users')->whereNotNull('approved_at')->get()->sortBy('advisory'); 
-    //    $section = User::where([
-    //     ['approved_at', '!=', Null],
-    //     [function($query) use ($request){
-    //         if(($section = $request->section)){
-    //             $query->orWhere('advisory', 'LIKE', '%'. $section . '%')->get();
-    //         }
-    //     }]
-    // ])
-
-    // ->orderBy("advisory","asc")
-    // ->paginate(4);
-
-    //    return view('home', compact('user', 'admin', 'student', 'section', 'meetings'), ['section' => $section])
-    //    ->with('i',(request()->input('page',1)-1)*5);
-      
-    // }
     }
 
     public function approval()
@@ -123,9 +98,6 @@ class HomeController extends Controller
         if($request->hasFile('avatar')){
     
           $destination = 'images/avatars/'.$adviser->avatar;
-        //   if(File::exists($destination)){
-        //      File::delete($destination);
-        //   }
           $file = $request->file('avatar');
           $extention = $file->getClientOriginalExtension();
           $filename = time().'.'. $extention;
@@ -142,9 +114,6 @@ class HomeController extends Controller
      public function delete($id){
         $adviser = User::find($id);
         $destination = 'images/avatars/'.$adviser->avatar;
-        //  if(File::exists($destination)){
-        //      File::delete($destination);
-        //  }
         $adviser->delete();
         return redirect()->back()->with('status', 'Adviser Removed Successfully!');
     

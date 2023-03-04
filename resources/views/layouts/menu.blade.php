@@ -36,7 +36,7 @@
 <li class="nav-item ">
     <a href="{{ route('case-reports') }}" class="nav-link {{ Request::is('case-reports') ? 'bg-info active' : '' }}">
         <p class="text-white">Case Reports</p>
-        <i class="fas fa-user-check fa-pull-left fa-md text-white"></i>
+        <i class="fas fa-book-open fa-pull-left fa-md text-white"></i>
     </a>
 </li>
 
@@ -59,7 +59,6 @@ $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('se
 </li>
  --}}
 
-
 @php
     $advisers = DB::table('users')->where('approved_at', '!=', null)->orderBy('advisory', 'asc')->get();
 @endphp
@@ -74,11 +73,6 @@ $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('se
         @endforeach
     </tbody>
 </table>
-
-
-
-
-
 
 <style scoped>
     .nav-item p {

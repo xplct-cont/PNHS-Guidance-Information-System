@@ -5,8 +5,7 @@
         <h1 class="text-center"
             style="color:whitesmoke; margin:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; color:dimgray;">
             Send Email to Parent/Guardian of Student</h1>
-        {{-- <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
-            style="width: 40px; height:40px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;"> --}}
+
     </div>
     <div class="row d-flex justify-content-center text-dark">
         <div class="col-md-11 p-3 rounded bg-light">
@@ -44,10 +43,9 @@
                     </div>
 
 
-                    <div class="container contact-form elevation-2 p-3">
+                    <div class="container contact-form elevation-2 mt-2 p-3">
                         <div class="contact-image">
-                            <img src="https://pnggrid.com/wp-content/uploads/2021/04/Gmail-Transparent-Logo-1024x768.png"
-                                style="height: 40px;" />
+                            <img src="https://mailmeteor.com/logos/assets/PNG/Gmail_Logo_512px.png" style="height: 40px;" />
                         </div>
                         <form action="{{ url('/send_email_parent_admin') }}" method="POST">
                             @csrf
