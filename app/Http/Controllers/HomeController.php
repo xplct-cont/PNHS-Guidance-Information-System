@@ -44,8 +44,12 @@ class HomeController extends Controller
         $student12 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 12%')->count();
         $case_reports = DB::table('case_reports')->count();
         $exit_forms = DB::table('exit_forms')->count();
-
-
+        $anecdotal_records = DB::table('anecdotal_records')->count();
+        $counseling_anecdotal_records = DB::table('counseling_anecdotal_records')->count();
+        $student_information_sheets = DB::table('student_information_sheets')->count();
+        $parent_conference_records = DB::table('parent_conference_records')->count();
+        $career_interest_test_results = DB::table('career_interest_test_results')->count();
+        $personality_test_results = DB::table('personality_test_results')->count();
 
         $adviser = User::whereNotNull('approved_at')->get()->sortBy('advisory');  
         $adviser = User::where([
@@ -61,7 +65,7 @@ class HomeController extends Controller
             ->orderBy("advisory","asc")
             ->paginate(6);  
 
-        return view('home', compact('meetings', 'admin', 'student11', 'user', 'adviser', 'student12', 'case_reports', 'exit_forms'),
+        return view('home', compact('meetings', 'admin', 'student11', 'user', 'adviser', 'student12', 'case_reports', 'exit_forms', 'anecdotal_records', 'counseling_anecdotal_records', 'student_information_sheets', 'parent_conference_records', 'career_interest_test_results', 'personality_test_results'),
         ['adviser' => $adviser])->with('i',(request()->input('page',1)-1)*5);
     }
 

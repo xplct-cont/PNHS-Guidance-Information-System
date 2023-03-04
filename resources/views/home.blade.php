@@ -96,6 +96,96 @@
                         <!-- small box -->
                         <div class="small-box bg-light text-secondary elevation-4">
                             <div class="inner">
+                                <h3>{{ $anecdotal_records }}</h3>
+
+                                <p class="text-secondary">Anecdotal Records</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-book text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $counseling_anecdotal_records }}</h3>
+
+                                <p class="text-secondary">Counseling Records</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-book text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $student_information_sheets }}</h3>
+
+                                <p class="text-secondary">Student Info Sheets</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-address-card text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $parent_conference_records }}</h3>
+
+                                <p class="text-secondary">Conference Records</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-book text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $career_interest_test_results }}</h3>
+
+                                <p class="text-secondary">Career Interest Results</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-newspaper text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $personality_test_results }}</h3>
+
+                                <p class="text-secondary">Personality Test Results</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-newspaper text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
                                 <h3>{{ $case_reports }}</h3>
 
                                 <p class="text-secondary">Case Reports</p>
@@ -126,7 +216,7 @@
                 </div>
             </div>
         </section>
-     
+
         <div class="card d-flex justify-content-end col-md-12" style="padding:3px;">
 
             <h2 style="color: dimgray; font-size:20px;" class="d-flex justify-content-between mb-3 mt-2 ">SHS ADVISERS
