@@ -13,7 +13,7 @@
 
     <body>
 
-        
+
         @if ($message = Session::get('status'))
             <div class="alert alert-success alert-block">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
@@ -26,16 +26,9 @@
             style="color:dimgray; font-size:22px; margin-left:20px; position:relative; top:15px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
             DASHBOARD</h1>
 
-        {{-- <li class="nav-item d-flex justify-content-end" style="position:relative; top:-30px;">
-            <a href="{{ route('calendar') }}"
-               class="nav-link {{ Request::is('calendar') ? '' : '' }}">
-                <span class="input-group-text fas fa-calendar-alt bg-success "><span style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">&nbsp;Calendar|meetings</span> </span>
-                
-            </a>
-        </li> --}}
 
         <div class="cardBox" style="margin-top:8px;">
-         
+
             <div class="card elevation-2">
                 <div class="iconBx">
                     <ion-icon name="people"></ion-icon>
@@ -115,7 +108,7 @@
                     <thead style="background-color: rgb(219, 219, 219)">
                         <tr>
 
-                            
+
                             <th style="text-align: center">Status</th>
                             <th style="text-align: center">Profile Image</th>
                             <th style="text-align: center">Name</th>
@@ -129,7 +122,8 @@
                             <th class="d-none d-md-table-cell d-lg-table-cell d-lg-table-cell" style="text-align: center">
                                 Email</th>
                             <th style="text-align: center">Edit</th>
-                            <th class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell" style="text-align: center">Delete</th>
+                            <th class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell" style="text-align: center">
+                                Delete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -137,22 +131,25 @@
                         @forelse ($adviser as $item)
                             <tr class="text-center">
 
-                                <td> @if(Cache::has('is_online' . $item->id))
-                                    <span class="logged-in bg-success btn-xs p-1 rounded" style=" color:white; font-size">Online</span>
-                                @else
-                                    <span  class="logged-in bg-secondary btn-xs p-1 rounded" style=" color:white;">Offline</span>
-                                @endif
-                              <div style="font-size: 12px;">
-                                @if($item->last_seen != null)
-                                {{ \Carbon\Carbon::parse($item->last_seen)->diffForHumans() }}
-                            @else
-                                No data
-                            @endif
-                              </div>
-                            </td>
+                                <td>
+                                    @if (Cache::has('is_online' . $item->id))
+                                        <span class="logged-in bg-success btn-xs p-1 rounded"
+                                            style=" color:white; font-size">Online</span>
+                                    @else
+                                        <span class="logged-in bg-secondary btn-xs p-1 rounded"
+                                            style=" color:white;">Offline</span>
+                                    @endif
+                                    <div style="font-size: 12px;">
+                                        @if ($item->last_seen != null)
+                                            {{ \Carbon\Carbon::parse($item->last_seen)->diffForHumans() }}
+                                        @else
+                                            No data
+                                        @endif
+                                    </div>
+                                </td>
 
-                                <td> <img src="{{ asset('storage/users-avatar/' . $item->avatar) }} " width="50px" height="50px"
-                                        alt="Image" style="border-radius: 50%"></td>
+                                <td> <img src="{{ asset('storage/users-avatar/' . $item->avatar) }} " width="50px"
+                                        height="50px" alt="Image" style="border-radius: 50%"></td>
                                 <td>{{ $item->name }}</td>
                                 <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">{{ $item->adviser_id }}
                                 </td>
@@ -161,12 +158,48 @@
                                     {{ $item->admin ? 'Guidance Designate' : 'Adviser' }}</td>
                                 <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">{{ $item->contact_no }}
                                 </td>
-                                <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">{{ $item->email }}</td>
-                                <td><a href="{{ url('edit-adviser/' . $item->id) }}" class="btn btn-warning btn-xs "><i
+                                <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">{{ $item->email }}
+                                </td>
+                                <td><a href="{{ url('edit-adviser/' . $item->id) }}" class="btn btn-warning btn-sm "><i
                                             class="fas fa-user-edit text-dark"></i></a></td>
-                                <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell"><a href="{{ url('delete-adviser/' . $item->id) }}" class="btn btn-danger btn-xs "><i
-                                            class="fas fa-trash"></i></a></td>
-                                {{-- <td><a href="{{url('show-adviser/'.$item->id)}}" class="btn btn-success btn-xs"><i class="fas fa-eye"></i></a></td> --}}
+
+
+                                <td><a href="#" data-toggle="modal" id="advisers_delete_link"
+                                        class="btn btn-danger btn-sm" data-target="#advisers_id{{ $item->id }}"><span
+                                            class=" fas fa-trash-alt"></span></a></td>
+
+                                <div class="modal fade" id="advisers_id{{ $item->id }}" tabindex="-1"
+                                    role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog " role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel"><span
+                                                        class="fas fa-exclamation-circle text-danger"
+                                                        style="font-size: 30px;"></span> </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <form action="{{ url('delete-adviser/' . $item->id) }}" method="GET"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
+                                                    @method('GET')
+
+                                                    <div class="container mx-auto text-dark">
+                                                        Are you sure you want to delete this permanently?
+                                                    </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-danger">Delete Permanently</button>
+                                            </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </tr>
 
                         @empty
@@ -204,7 +237,8 @@
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header bg-info">
-                                        <h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:400">Creating Meeting...</h5>
+                                        <h5 class="modal-title" id="exampleModalLongTitle" style="font-weight:400">
+                                            Creating Meeting...</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -213,7 +247,7 @@
                                         <div class="form-group">
                                             <label for=""
                                                 style="color:dimgray; font-weight:500; font-size: 16px;">Title:
-                                              </label>
+                                            </label>
                                             <textarea id="" type="text" class="form-control" title="" rows="2" required
                                                 name="title_of_the_meeting" placeholder="Write the title of the meeting"></textarea>
                                         </div>
@@ -221,15 +255,16 @@
                                         <div class="form-group mt-3">
                                             <label for=""
                                                 style="color:dimgray; font-weight:500; font-size: 16px; "> Location:
-                                               </label>
+                                            </label>
                                             <input type="text" class="form-control"
-                                                placeholder="Location of the meeting" name="location_of_the_meeting" required>
+                                                placeholder="Location of the meeting" name="location_of_the_meeting"
+                                                required>
                                         </div>
 
                                         <div class="form-group mt-3">
                                             <label for=""
                                                 style="color:dimgray; font-weight:500; font-size: 16px; ">Date and Time:
-                                               </label>
+                                            </label>
                                             <input type="datetime-local" class="form-control" name="meeting_date_time"
                                                 required>
                                         </div>
@@ -380,13 +415,5 @@
                 margin-bottom: 20px;
             }
         }
-
-
-        /* .card {
-                            
-                            padding: 1px;
-                            text-align: center;
-                            background-color: #f1f1f1;
-                            } */
     </style>
 @endsection
