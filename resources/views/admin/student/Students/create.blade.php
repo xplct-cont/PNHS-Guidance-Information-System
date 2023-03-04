@@ -3,20 +3,19 @@
 @section('content')
 <a href="{{url('/advisory-list/'.$adviser->id)}}"><span class="fas fa-arrow-left" style="font-size: 20px;"></span> </a>
     
-        <div class="mx-auto text-center mb-3">
+    <div class="row d-flex justify-content-center text-dark">
+        <div class="mx-auto text-center mb-3 mt-3">
             <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
-            style="width: 130px; height:130px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
+            style="width: 200px; height:200px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
        
             <h1 class="mb-3 mt-3"
             style="color:whitesmoke; margin:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px; color:dimgray;">
-            Add {{$adviser->advisory}} Student</h1>
+            {{$adviser->advisory}}</h1>
         </div>
 
-
-    <div class="row d-flex justify-content-center text-dark">
-        <div class="col-md-12 p-3 rounded bg-light">
+        <div class="col-md-8 p-3 mt-3 rounded bg-light">
             @if ($message = Session::get('status'))
-            <div class="alert alert-success alert-block">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
                 <strong>{{ $message }}</strong>
             </div>
@@ -145,4 +144,9 @@
         </div>
     </div>
     </div>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection

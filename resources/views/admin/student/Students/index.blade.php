@@ -29,7 +29,7 @@
             </form>
         </div>
         <a href="{{ url('/advisory-list/' . $adviser->id . '/add-new-student/') }}" class="btn btn-primary ml-2"
-            style="margin-top: 10px;"><span class="fas fa-user-graduate mr-1"></span>
+            style="margin-top: 10px;"><span class="fas fa-plus-circle mr-1"></span>
             New Student
         </a>
         <div class="container col-md-12 " style="position: relative; margin-top:1%;">

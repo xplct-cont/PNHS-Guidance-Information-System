@@ -15,7 +15,7 @@
 
 
         @if ($message = Session::get('status'))
-            <div class="alert alert-success alert-block">
+            <div class="alert alert-success  alert-dismissible fade show " role="alert">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
                 <strong>{{ $message }}</strong>
             </div>
@@ -27,121 +27,109 @@
             DASHBOARD</h1>
 
 
-            <section class="content mt-5">
-                <div class="container-fluid">
-                    <!-- Small boxes (Stat box) -->
-                    <div class="row">
-                        <!-- ./col -->
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-light text-secondary elevation-4">
-                                <div class="inner">
-                                    <h3>{{ $student11 }}</h3>
-        
-                                    <p class="text-secondary">Grade 11 Students</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-users text-secondary"></i>
-                                </div>
-                                <a href="#" class="small-box-footer bg-info text-light"><span
-                                        class="text-light"></span></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-light text-secondary elevation-4">
-                                <div class="inner">
-                                    <h3>{{ $student12 }}</h3>
-        
-                                    <p class="text-secondary">Grade 12 Students</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-users text-secondary"></i>
-                                </div>
-                                <a href="#" class="small-box-footer bg-info text-light"><span
-                                        class="text-light"></span></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-light text-secondary elevation-4">
-                                <div class="inner">
-                                    <h3>{{ $admin }}</h3>
-        
-                                    <p class="text-secondary">Administrator</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-user-cog text-secondary"></i>
-                                </div>
-                                <a href="#" class="small-box-footer bg-info text-light"><span
-                                        class="text-light"></span></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-light text-secondary elevation-4">
-                                <div class="inner">
-                                    <h3>{{ $user }}</h3>
-        
-                                    <p class="text-secondary">Advisers</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-user-tie text-secondary"></i>
-                                </div>
-                                <a href="#" class="small-box-footer bg-info text-light"><span
-                                        class="text-light"></span></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-light text-secondary elevation-4">
-                                <div class="inner">
-                                    <h3>{{ $case_reports }}</h3>
-        
-                                    <p class="text-secondary">Case Reports</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-book-open text-secondary"></i>
-                                </div>
-                                <a href="#" class="small-box-footer bg-info text-light"><span
-                                        class="text-light"></span></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-6">
-                            <!-- small box -->
-                            <div class="small-box bg-light text-secondary elevation-4">
-                                <div class="inner">
-                                    <h3>{{ $exit_forms }}</h3>
-        
-                                    <p class="text-secondary">Exit Forms</p>
-                                </div>
-                                <div class="icon">
-                                    <i class="fas fa-address-book text-secondary"></i>
-                                </div>
-                                <a href="#" class="small-box-footer bg-info text-light"><span
-                                        class="text-light"></span></a>
-                            </div>
-                        </div>
+        <section class="content mt-5">
+            <div class="container-fluid">
+                <!-- Small boxes (Stat box) -->
+                <div class="row">
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $student11 }}</h3>
 
+                                <p class="text-secondary">Grade 11 Students</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-users text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
                     </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $student12 }}</h3>
+
+                                <p class="text-secondary">Grade 12 Students</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-users text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $admin }}</h3>
+
+                                <p class="text-secondary">Administrator</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-user-cog text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $user }}</h3>
+
+                                <p class="text-secondary">Advisers</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-user-tie text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $case_reports }}</h3>
+
+                                <p class="text-secondary">Case Reports</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-book-open text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $exit_forms }}</h3>
+
+                                <p class="text-secondary">Exit Forms</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-address-book text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+
                 </div>
-            </section>
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
+        </section>
 
         <div class="card d-flex justify-content-end col-md-12" style="padding:3px;">
 
-            <h2 style="color: dimgray; font-size:16px;" class="d-flex justify-content-between ">ALL PNHS ADVISERS
+            <h2 style="color: dimgray; font-size:20px;" class="d-flex justify-content-between mb-3 mt-2 ">SHS ADVISERS
             </h2>
             <div class="mx-auto">
                 <a class="btn btn-danger mb-2 mr-2" style="" href="{{ route('export_advisers_pdf') }}"><span
@@ -395,9 +383,13 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
+
     </html>
-
-
 
 
     <style scoped>
