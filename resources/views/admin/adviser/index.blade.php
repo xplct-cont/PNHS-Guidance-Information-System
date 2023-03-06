@@ -9,14 +9,12 @@
 
     <div class="container">
         <div class="row">
-
             <div class="container " style="position: relative; margin-top:2%;">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-header elevation-2" style="height: 60px;">
                                 <h4 style="position: absolute; left:38%; color:dimgray;">Senior High Advisers</h4>
-                                {{-- <a href="{{url('add-adviser')}}" class="btn btn-info float-start" >Register Adviser</a> --}}
 
                                 <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
                                     style="width: 40px; height:40px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
@@ -52,8 +50,9 @@
                                         @foreach ($user as $item)
                                             <tr class="text-center">
 
-                                                <td><img src="{{ asset('images/avatars/' . $item->avatar) }} " width="50px"
-                                                        height="50px" alt="Image" style="border-radius: 50%"></td>
+                                                <td><img src="{{ asset('images/avatars/' . $item->avatar) }} "
+                                                        width="50px" height="50px" alt="Image"
+                                                        style="border-radius: 50%"></td>
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->advisory }}</td>
                                                 <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">

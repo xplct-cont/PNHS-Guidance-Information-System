@@ -11,39 +11,38 @@
 
     <div class="container" style=" background: linear-gradient(#28313B, #485461);  width: 600px;">
 
-    <div class="container" style="color:white;  background: linear-gradient(#28313B, #485461); width: 600px;">
-                <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVRTCHiIiL1FcTvHzaU5O1QmhNwdThjQkymI8J_D4BWg&s"
+        <div class="container" style="color:white;  background: linear-gradient(#28313B, #485461); width: 600px;">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVRTCHiIiL1FcTvHzaU5O1QmhNwdThjQkymI8J_D4BWg&s"
                     style="height: 60px; border-radius: 50%; margin-left: 270px; margin-top: 15px;" />
-                    <h2 style="color:white; text-align:center; font-size: 20px;">Pangangan National High School <br><span
+                <h2 style="color:white; text-align:center; font-size: 20px;">Pangangan National High School <br><span
                         style="font-size: 15px; margin-top: -20px;">Guidance Office<br></span></h2>
-                </div>
-        <div class="card"
-            style="border:1px solid white;  height: 100px; width: 150px text-align:center;">
-            
-            <div class="card-header">
-            </div><br>
-            <div class="card-body" style="background-color:#5bc0de; color:white;">
-                <div class="subject" style=" text-align:center; color:white;">
-                    To: {{ $parent_name }}
-                </div><br>
             </div>
+            <div class="card" style="border:1px solid white;  height: 100px; width: 150px text-align:center;">
+
+                <div class="card-header">
+                </div><br>
+                <div class="card-body" style="background-color:#5bc0de; color:white;">
+                    <div class="subject" style=" text-align:center; color:white;">
+                        To: {{ $parent_name }}
+                    </div><br>
+                </div>
+            </div>
+
         </div>
 
+        <div class="">
+            <p style="color:white; text-align:center;">Content :</p>
+            <textarea readonly
+                style="margin-left: 1.5px; margin-right:auto; margin-top: -10px; color:#292b2c; height:150px; width: 591px; font-size: 15px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $content }}</textarea>
+
+            <h1 style="font-size: 12px; color: white; font-weight: 400; margin-left: 10px; margin-bottom: 5px;">Regards,
+                <br>Guidance Designate
+            </h1>
+
+        </div>
     </div>
-
-    <div class="">
-      <p style="color:white; text-align:center;">Content :</p>
-      <textarea readonly
-          style="margin-left: 1.5px; margin-right:auto; margin-top: -10px; color:#292b2c; height:150px; width: 591px; font-size: 15px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $content }}</textarea>
-
-    <h1 style="font-size: 12px; color: white; font-weight: 400; margin-left: 10px; margin-bottom: 5px;">Regards, <br>Guidance Designate</h1>
-  
     </div>
-</div>
-
-
-</div>
 </body>
 
 </html>

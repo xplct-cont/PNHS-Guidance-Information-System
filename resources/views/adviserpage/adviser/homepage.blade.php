@@ -170,26 +170,6 @@
         </div>
     </div>
 
-    <div class="container-fluid-content-row">
-        <div class="row">
-            <div class="card bg-light col-md-12 elevation-2 text-dark">
-                <h1 style="color:dimgray;" class="p-3 mb-5"> <i style=" font-size:25px;color: dimgray;"> Welcome
-                        {{ Auth::user()->name }}!</i></h1>
-                <h2 class="text-center"
-                    style="font-size: 32px; margin:auto; position:relative; top: -25px; color:dimgray; text-shadow: 1px 1px #17a2b8;">
-                    Guidance Information System</h2>
-                <img src="/images/image17.png" class="user-image img-circle elevation-2 mx-auto" alt="User Image"
-                    style="width: 230px; height:230px; border-radius: 50%; position:relative; top: -20px; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
-                <h3 class="" style="font-size: 22px; margin:auto; position:relative; top:-15px; color:dimgray;">
-                    Pangangan National High School<br></h3>
-                <h3 class="mb-3" style="font-size: 18px; margin:auto; position:relative; top:-10px; color:dimgray;">
-                    Talisay,
-                    Calape, Bohol<br></h3>
-
-            </div>
-        </div>
-    </div>
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

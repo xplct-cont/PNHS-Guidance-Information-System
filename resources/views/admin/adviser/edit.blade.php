@@ -31,19 +31,15 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+                <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                <![endif]-->
 
     </head>
 
 
     <body>
-        {{-- @if (session('status'))
-    <h6 class="alert alert-success"style="font-size: 20px;">
-      {{session('status')}}
-    </h6>
-    @endif --}}
+
         @if ($message = Session::get('status'))
             <div class="alert alert-success alert-block">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
@@ -89,7 +85,8 @@
                         <div class="input-group mb-3">
                             <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
                                     style="width: 43px;">ID</span></label>
-                            <input type="text" name="adviser_id" value="{{ $adviser->adviser_id }}" class="form-control" required>
+                            <input type="text" name="adviser_id" value="{{ $adviser->adviser_id }}" class="form-control"
+                                required>
                         </div>
 
                         <div class="input-group mb-3">
@@ -123,15 +120,18 @@
                         </div>
 
 
-                        <p class="text-center" style="color: dimgray; font-weight: 500"><span class="fas fa-exclamation-triangle text-danger"></span> Select Role</p>
+                        <p class="text-center" style="color: dimgray; font-weight: 500"><span
+                                class="fas fa-exclamation-triangle text-danger"></span> Select Role</p>
                         <div class="form-group text-dark d-flex justify-content-center">
                             <div class="maxl">
                                 <label class="radio inline mr-5">
-                                    <input type="radio" name="admin" value="1" {{ ($adviser->admin == '1' ? ' checked' : 'Unchecked') }}>
+                                    <input type="radio" name="admin" value="1"
+                                        {{ $adviser->admin == '1' ? ' checked' : 'Unchecked' }}>
                                     <span>Administrator</span>
                                 </label>
                                 <label class="radio inline">
-                                    <input type="radio" name="admin" value="0"  {{ ($adviser->admin == '0' ? ' checked' : 'Unchecked') }}>
+                                    <input type="radio" name="admin" value="0"
+                                        {{ $adviser->admin == '0' ? ' checked' : 'Unchecked' }}>
                                     <span>Adviser</span>
                                 </label>
                             </div>
@@ -159,10 +159,6 @@
 
     </html>
 
-
     <style scoped>
-
-
-
     </style>
 @endsection
