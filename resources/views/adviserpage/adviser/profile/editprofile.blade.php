@@ -31,16 +31,16 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
 
     </head>
 
     <body>
-          
+
         @if ($message = Session::get('status'))
-            <div class="alert alert-success alert-block">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
                 <strong>{{ $message }}</strong>
             </div>
@@ -60,10 +60,12 @@
                         style=" width: 255px; height:255px;border-radius: 50%; float:left; ">
 
                 </div>
-                <p class="d-flex justify-content-center" style="position:absolute; top: 260px; color:black">{{ $user->advisory }} </p>
-                <a class="btn btn-sm btn-danger d-flex justify-content-center" href="{{ url('adviser-change-password/' . $user->id) }}"
-                    style="position:absolute; top: 320px; color:white;"><span
-                        class="fas fa-key"></span>&nbsp;Change Password</a>
+                <p class="d-flex justify-content-center" style="position:absolute; top: 260px; color:black">
+                    {{ $user->advisory }} </p>
+                <a class="btn btn-sm btn-danger d-flex justify-content-center"
+                    href="{{ url('adviser-change-password/' . $user->id) }}"
+                    style="position:absolute; top: 320px; color:white;"><span class="fas fa-key"></span>&nbsp;Change
+                    Password</a>
             </div>
 
             <div class="col-md-6 text-dark mx-auto">
@@ -97,7 +99,8 @@
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
                                 style="width: 43px;">ID</span></label>
-                        <input type="text" name="adviser_id" value="{{ $user->adviser_id }}" class="form-control" required>
+                        <input type="text" name="adviser_id" value="{{ $user->adviser_id }}" class="form-control"
+                            required>
                     </div>
 
 
@@ -123,7 +126,8 @@
 
                     <div class="mb-3">
 
-                        <button type="submit" class="btn btn-success float-right btn-sm"><span class="fas fa-save"></span>
+                        <button type="submit" class="btn btn-success float-right btn-sm"><span
+                                class="fas fa-save"></span>
                             Save Changes</button>
 
                     </div>
@@ -144,10 +148,12 @@
 
     </html>
 
-
     <style scoped>
 
-
-
     </style>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection
