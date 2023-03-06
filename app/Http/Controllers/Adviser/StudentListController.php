@@ -27,7 +27,6 @@ class StudentListController extends Controller
 
 
     public function myStudents(Request $request) {
-        // $myStudents = Student::where('user_id', auth()->user()->id)->get();
         $countmyStudents = DB::table('students')->where('user_id', auth()->user()->id)->count();
         $myStudents = Student::where([
             ['user_id', auth()->user()->id],
@@ -89,7 +88,7 @@ class StudentListController extends Controller
             'school_year' => $request->school_year,
         ]);
 
-        return redirect()->route('advisory-list-students')->with('status','Added New Student!');
+        return redirect()->back()->with('status','Added New Student!');
     }
 
     public function edit(Student $student) {

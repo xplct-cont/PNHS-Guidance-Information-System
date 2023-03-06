@@ -1,4 +1,3 @@
-
 <ul style="position:relative; left: -38px; margin:auto; height: 50px;">
     <li class="nav-item list-unstyled">
         <a href="{{ url('/adviserprofile') }}">
@@ -14,8 +13,8 @@
 
 <li class="nav-item mt-4">
     <a href="{{ route('homepage') }}" class="nav-link {{ Request::is('homepage*') ? 'bg-info active' : '' }}">
-        <p class="text-white">Home</p>
-        <i class="fas fa-home fa-pull-left fa-md text-white"></i>
+        <p class="text-white">Dashboard</p>
+        <i class="fas fa-tachometer-alt fa-pull-left fa-md text-white"></i>
     </a>
 </li>
 
@@ -23,14 +22,14 @@
     <a href="{{ route('advisory-list-students') }}"
         class="nav-link {{ Request::is('advisory-list-students*') ? 'bg-info active' : '' }}">
         <p class="text-white">{{ Auth::user()->advisory }}</p>
-        <i class="fas fa-user-graduate fa-pull-left fa-md text-white"></i>
+        <i class="fas fa-users fa-pull-left fa-md text-white"></i>
     </a>
 </li>
 
 <li class="nav-item">
     <a href="{{ route('parent-lists') }}" class="nav-link {{ Request::is('parent-lists*') ? 'bg-info active' : '' }}">
-        <p class="text-white">Parents</p>
-        <i class="fas fa-users fa-pull-left fa-md text-white"></i>
+        <p class="text-white">Parent/Guardian</p>
+        <i class="fas fa-user fa-pull-left fa-md text-white"></i>
     </a>
 </li>
 
@@ -49,7 +48,7 @@
 
 <style scoped>
     .nav-item p {
-        
+
         font-size: 16px;
         left: 3px;
         top: 1px;
