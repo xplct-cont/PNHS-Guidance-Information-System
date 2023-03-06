@@ -19,7 +19,7 @@
                 style="position: absolute; left:40%; color:whitesmoke; margin:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">
                 {{ Auth::user()->advisory }} Students</h4>
 
-            <a href="{{ url('/students/create') }}" class="btn btn-primary"><span class="fas fa-user-graduate mr-1"></span>
+            <a href="{{ url('/students/create') }}" class="btn btn-primary"><span class="fas fa-plus-circle mr-1"></span>
                 Add New Student
             </a>
 
