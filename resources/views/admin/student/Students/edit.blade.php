@@ -7,8 +7,8 @@
     <div class="row d-flex justify-content-center text-dark">
 
         <div class="mx-auto text-center mb-3">
-            <img src="/images/image17.png" class="user-image img-circle elevation-2 mt-3" alt="User Image"
-                style="width: 200px; height:200px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
+            <img src="/images/image17.png" class="user-image  mt-3" alt="User Image"
+                style="width: 300px; height:240px; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
 
             <h1 class="mb-3 mt-3"
                 style="color:whitesmoke; margin:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px; color:dimgray;">

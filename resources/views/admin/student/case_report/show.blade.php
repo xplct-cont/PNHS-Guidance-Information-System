@@ -5,7 +5,7 @@
         <a class="fas fa-arrow-left" style="font-size:20px; color:blue;" href="{{ url('case-reports') }}"></a>
     </div>
     @if ($message = Session::get('status'))
-        <div class="alert alert-success alert-block">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
             <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
             <strong>{{ $message }}</strong>
         </div>
@@ -19,8 +19,8 @@
 
         <div class="">
             <div class="d-flex justify-content-center mt-5">
-                <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
-                    style="width: 120px; height:120px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
+                <img src="/images/image17.png" class="user-image " alt="User Image"
+                    style="width: 185px; height:150px; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
             </div>
 
             <h1 class="text-center mt-4 p-1"
@@ -117,4 +117,9 @@
             </div>
         </div>
     </div>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection

@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="d-flex justify-content-center">
-        <img src="/images/image17.png" class="user-image img-circle elevation-2 " alt="User Image"
-            style="width: 120px; height:120px; border-radius: 50%; background-color: #5bc0de; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
+        <img src="/images/image17.png" class="user-image " alt="User Image"
+            style="width: 185px; height:150px; padding-left: 2px; padding-right:2px; padding-bottom:2px; padding-top: 2px;">
     </div>
 
     <h1 class="text-dark p-2 text-center"

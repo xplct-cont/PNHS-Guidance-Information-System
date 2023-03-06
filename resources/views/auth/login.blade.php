@@ -53,8 +53,8 @@
 
                     <div class="card shadow-lg rounded">
                         <div class="card-header bg-dark shadow-lg rounded d-flex justify-content-between">
-                            <img src="/images/image17.png" class=" shadow-lg rounded-circle"
-                                style="height: 100px; width:100px; margin:auto;">
+                            <img src="/images/image17.png" class=" rounded-circle"
+                                style="height: 130px; margin:auto;">
                             <h3 class="text-center" style="font-size: 18px; margin:auto;color: white ">PANGANGAN NATIONAL
                                 HIGH SCHOOL <br>
                                 <p class="text-center" style="font-size: 15px; color: whitesmoke;">Talisay, Calape, Bohol
