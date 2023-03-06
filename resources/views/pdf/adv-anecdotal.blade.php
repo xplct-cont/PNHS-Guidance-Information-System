@@ -10,7 +10,7 @@
 
 <body>
 
-    <img src="{{ public_path('images/image17.png') }}" style="width: 100px; height: 100px; border-radius: 50%;">
+    <img src="{{ public_path('images/image17.png') }}" style="width: 130px; height: 100px; border-radius: 50%;">
     <div style="margin-top: -120px;">
         <h1>PANGANGAN NATIONAL HIGH SCHOOL</h1>
         <h2>Guidance Office</h2>

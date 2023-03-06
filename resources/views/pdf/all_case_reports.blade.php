@@ -37,7 +37,7 @@
         img{
             border-radius: 50%;
             height: 100px;
-            width: 100px;
+            width: 130px;
             margin-left: 298px;
         }
 
