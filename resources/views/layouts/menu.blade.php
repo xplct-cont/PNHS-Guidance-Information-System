@@ -74,7 +74,7 @@ $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('se
             <tr>
                 <td class="text-light"><a class="text-light" style="margin-left: -15px;"
                         href="{{ url('advisory-list/' . $teachers->id) }}">{{ $teachers->advisory }}<i
-                            class="fas fa-user-friends fa-pull-left fa-md "
+                            class="fas fa-users fa-pull-left fa-md "
                             style="margin-left: 10px; margin-right: 25px;"></i></a></td>
 
             </tr>
