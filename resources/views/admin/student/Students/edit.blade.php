@@ -53,7 +53,7 @@
 
                             <div class="input-group mb-3">
                                 <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
-                                        style="width: 45px; font-size: 15px;">Mi</span></label>
+                                        style="width: 45px; font-size: 15px;">Mn</span></label>
                                 <input type="text" name="middlename" class="form-control"
                                     value="{{ $advisoryStud->middlename }}" required>
                             </div>

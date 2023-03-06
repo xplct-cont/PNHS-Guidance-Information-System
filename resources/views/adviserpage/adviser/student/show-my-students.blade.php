@@ -1,21 +1,21 @@
 @extends('adviserpage.app')
-
-
 @section('content')
-<div class="p-1">
-    <a class="fas fa-arrow-left" style="font-size:20px; color:blue;" href="{{ url('advisory-list-students')}}"></a>
-</div>
+    <div class="p-1">
+        <a class="fas fa-arrow-left" style="font-size:20px; color:blue;" href="{{ url('advisory-list-students') }}"></a>
+    </div>
+
     <body>
         <h1 class="text-dark p-3"
             style="font-weight:normal; font-size: 25px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
             Records of {{ $myStud->lastname }}, {{ $myStud->firstname }}</h1>
         <hr>
         @if ($message = Session::get('status'))
-            <div class="alert alert-success alert-block">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
                 <strong>{{ $message }}</strong>
             </div>
         @endif
+
         <div class="py-5">
             <div class="container">
                 <div class="row hidden-md-up">
@@ -66,10 +66,10 @@
                                     </div>
                                 </div>
                             </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <form action="{{ url('/send_email_myStudent') }}" method="POST">
@@ -162,4 +162,9 @@
             color: white;
         }
     </style>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection

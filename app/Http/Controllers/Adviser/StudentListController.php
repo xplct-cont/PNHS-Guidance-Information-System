@@ -115,7 +115,7 @@ class StudentListController extends Controller
 
         $student->update($request->all());
 
-        return redirect()->route('advisory-list-students')->with('status', 'Student Update Successfully!');
+        return redirect()->back()->with('status', 'Student Updated Successfully!');
     }
 
     

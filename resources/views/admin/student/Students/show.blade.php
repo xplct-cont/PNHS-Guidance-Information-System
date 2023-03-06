@@ -1,15 +1,17 @@
 @extends('layouts.layoutsidebar')
 @section('content')
-<div class="p-1">
-    <a class="fas fa-arrow-left" style="font-size:20px; color:blue;" href="{{ url('advisory-list/' .$wisdomStud->user->id)}}"></a>
-</div>
+    <div class="p-1">
+        <a class="fas fa-arrow-left" style="font-size:20px; color:blue;"
+            href="{{ url('advisory-list/' . $wisdomStud->user->id) }}"></a>
+    </div>
+
     <body>
         <h1 class="text-dark p-3"
             style="font-weight:normal; font-size: 25px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
             Records of {{ $wisdomStud->lastname }}, {{ $wisdomStud->firstname }} from {{ $wisdomStud->year_section }}</h1>
         <hr>
         @if ($message = Session::get('status'))
-            <div class="alert alert-success alert-block">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
                 <strong>{{ $message }}</strong>
             </div>
@@ -68,8 +70,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="card mb-3">
-                            <a
-                                href="{{ url('show-student/' . $wisdomStud->id . '/counseling_anecdotal_record') }}">
+                            <a href="{{ url('show-student/' . $wisdomStud->id . '/counseling_anecdotal_record') }}">
                                 <div class="layer">
 
                                 </div>
@@ -180,26 +181,28 @@
         <form action="{{ url('/send_email_student') }}" method="POST">
             @csrf
             <div class="input-group mb-3 mx-auto" style="width: 300px; margin-top: -30px;">
-                <input type="email" name="email" class="form-control text-center" value="{{ $wisdomStud->email }}" required
-                    required>
+                <input type="email" name="email" class="form-control text-center" value="{{ $wisdomStud->email }}"
+                    required required>
             </div>
             <div class="text d-flex justify-content-center text-dark" style="margin-top: 40px; font-size:20px;">
 
-                
+
                 <div class="container " style="position: relative; top:-40px;">
                     <div class="form-group">
                         <label for="" style="font-weight:400; font-size: 16px;">To:</label>
                         <input type="text" name="subject" class="form-control"
-                            value="{{ $wisdomStud->firstname }} {{ $wisdomStud->middlename }} {{ $wisdomStud->lastname }}" required />
+                            value="{{ $wisdomStud->firstname }} {{ $wisdomStud->middlename }} {{ $wisdomStud->lastname }}"
+                            required />
                     </div>
-    
+
                     <button type="submit" class="btn btn-info rounded"
                         style="width: 130px; height: 40px; position:relative; top: 10px;">Send Email&nbsp;&nbsp;<span
-                            class=""></span></button>  
+                            class=""></span></button>
 
                     <div class="bg-light" style="">
                         <div class="input-group mt-3">
-                            <textarea class="form-control" name="content" required aria-label="" placeholder="Write something here..." style="height: 12rem;"></textarea>
+                            <textarea class="form-control" name="content" required aria-label="" placeholder="Write something here..."
+                                style="height: 12rem;"></textarea>
                         </div>
                     </div>
                 </div>
@@ -270,4 +273,9 @@
             color: white;
         }
     </style>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection
