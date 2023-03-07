@@ -1,12 +1,12 @@
 @extends('layouts.layoutsidebar')
 
 @section('content')
-    @if ($message = Session::get('status'))
-        <div class="alert alert-success alert-block">
-            <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
-            <strong>{{ $message }}</strong>
-        </div>
-    @endif
+@if ($message = Session::get('status'))
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
+    <strong>{{ $message }}</strong>
+</div>
+@endif
     <div class="search" style="position:relative; top: 5px;">
         <div class="mx-auto" style="width:340px;">
             <form action="{{ url('advisory-list/' . $adviser->id) }}" method="GET" role="search">
@@ -183,4 +183,9 @@
     </div>
     </div>
     </div>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection
