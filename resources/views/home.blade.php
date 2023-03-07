@@ -312,7 +312,7 @@
                                             class="fas fa-user-edit text-dark"></i></a></td>
 
 
-                                <td><a href="#" data-toggle="modal" id="advisers_delete_link"
+                                <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell"><a href="#" data-toggle="modal" id="advisers_delete_link"
                                         class="btn btn-danger btn-sm" data-target="#advisers_id{{ $item->id }}"><span
                                             class=" fas fa-trash-alt"></span></a></td>
 
