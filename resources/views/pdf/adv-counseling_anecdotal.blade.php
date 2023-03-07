@@ -68,25 +68,36 @@
     </div>
 
     <div class="" style="">
-        <p class="" style="font-size:14px; margin-top: 75px;">Reasons for Referral</p>
-        <textarea
-            style="margin-top: -10px; height: 60px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $counseling_anecdotal_records->reasons_for_referral }}</textarea>
+        <p class="" style="font-size:14px; margin-top: 75px;">Reasons for Referral:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+            {{ $counseling_anecdotal_records->reasons_for_referral }}</p>
+        </p>
 
-        <p class="" style="font-size:14px;">Information/Behavior Observed</p>
-        <textarea
-            style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $counseling_anecdotal_records->behavior_observed }}</textarea>
+        <p class="" style="font-size:14px;">Information/Behavior Observed:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+            {{ $counseling_anecdotal_records->behavior_observed }}</p>
+        </p>
 
-        <p class="" style="font-size:14px;">Interview Findings</p>
-        <textarea
-            style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $counseling_anecdotal_records->interview_findings }}</textarea>
+        <p class="" style="font-size:14px;">Interview Findings:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+            {{ $counseling_anecdotal_records->interview_findings }}</p>
+        </p>
 
-        <p class="" style="font-size:14px;">Comments/Clinical Impressions</p>
-        <textarea
-            style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $counseling_anecdotal_records->clinical_impressions }}</textarea>
+        <p class="" style="font-size:14px;">Comments/Clinical Impressions:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+            {{ $counseling_anecdotal_records->clinical_impressions }}</p>
+        </p>
 
-        <p class="" style="font-size:14px;">Recommendations</p>
-        <textarea
-            style=" margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $counseling_anecdotal_records->recommendation }}</textarea>
+        <p class="" style="font-size:14px;">Recommendations:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">
+            {{ $counseling_anecdotal_records->recommendation }}</p>
+        </p>
+
     </div>
     <p
         style="font-size: 14px; font-weight: 400; margin-left: 5px; color:dimgray; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">

@@ -23,7 +23,8 @@
 
     <div class="">
         <p style="font-size: 14px;">Observation Date and Time: <span
-                style="border-bottom: 1px solid dimgray;">{{ $anecdotal_records->observation_date_time->format('F d,  Y - g:i A') }}</span></p>
+                style="border-bottom: 1px solid dimgray;">{{ $anecdotal_records->observation_date_time->format('F d,  Y - g:i A') }}</span>
+        </p>
     </div>
     <div class="" style="margin-top: -10px;">
         <p style="font-size: 14px;">Student Name: <span
@@ -43,21 +44,28 @@
 
     <div class="" style="">
 
-        <p class="" style="font-size:14px;">Description of Incident</p>
-        <textarea style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $anecdotal_records->description_of_incident }}</textarea>
+        <p class="" style="font-size:14px;">Description of Incident:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            {{ $anecdotal_records->description_of_incident }}</p>
+        </p>
 
-        <p class="" style="font-size:14px;">Description of the Location/Setting</p>
-        <textarea style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $anecdotal_records->location_of_incidents }}</textarea>
+        <p class="" style="font-size:14px;">Description of the Location/Setting: </p>
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            {{ $anecdotal_records->location_of_incidents }}</p>
 
+        <p class="" style="font-size:14px;">Action Taken: </p>
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            {{ $anecdotal_records->actions_taken }}</p>
 
-        <p class="" style="font-size:14px;">Action Taken</p>
-        <textarea style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $anecdotal_records->actions_taken }}</textarea>
+        <p class="" style="font-size:14px;">Recommendation: </p>
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            {{ $anecdotal_records->recommendations }}</p>
 
-
-        <p class="" style="font-size:14px;">Recommendation</p>
-        <textarea style=" margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $anecdotal_records->recommendations }}</textarea>
     </div>
-
 
     <p
         style="font-size: 14px; font-weight: 400; margin-left: 5px; color:dimgray; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -104,5 +112,4 @@
         text-align: center;
 
     }
-
 </style>

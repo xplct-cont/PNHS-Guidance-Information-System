@@ -62,20 +62,26 @@
 
     <div class="" style="">
 
-        <p class="" style="font-size:14px;">Problem/Concern</p>
-        <textarea
-            style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $parent_conference_records->problem_concern }}</textarea>
+        <p class="" style="font-size:14px;">Problem/Concern:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            {{ $parent_conference_records->problem_concern }}</p>
+        </p>
 
-        <p class="" style="font-size:14px;">Topics Discussed</p>
-        <textarea
-            style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $parent_conference_records->topics_discussed }}</textarea>
+        <p class="" style="font-size:14px;">Topics Discussed:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            {{ $parent_conference_records->topics_discussed }}</p>
+        </p>
 
-        <p class="" style="font-size:14px;">Suggested Resolution</p>
-        <textarea
-            style="margin-top: -10px; height: 100px; font-size: 12px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">{{ $parent_conference_records->suggested_resolution }}</textarea>
+        <p class="" style="font-size:14px;">Suggested Resolution:
+        <p
+            style="text-indent:1cm; overflow-wrap: break-word; font-size: 13px; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            {{ $parent_conference_records->suggested_resolution }}</p>
+        </p>
 
         <div class="" style="margin-top: -10px; text-align:center;">
-            <p style="font-size: 14px;">Action Taken:<span
+            <p style="font-size: 14px;">Action Taken: <span
                     style="border-bottom: 1px solid dimgray;">{{ $parent_conference_records->action_taken }}</span>
             </p>
         </div>
