@@ -196,7 +196,7 @@
                             <td><a href="{{ url('show_case_report/' . $reports->id) }}" class="btn btn-xs"><i
                                         class="fas fa-eye text-success"></i></a></td>
 
-                            <td><a href="#" data-toggle="modal" id="reports_delete_link" class="btn  btn-sm"
+                            <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell" style="text-align: center"><a href="#" data-toggle="modal" id="reports_delete_link" class="btn  btn-sm"
                                     data-target="#reports_id{{ $reports->id }}"><span
                                         class=" text-danger fas fa-trash-alt"></span></a></td>
 
