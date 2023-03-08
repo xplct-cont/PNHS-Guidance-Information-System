@@ -45,8 +45,8 @@
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-light"></i><h2 style="position:relative; margin:auto; left:23px; top:-21.2px; font-size:15px; color:white;">
-                    Pangangan National High School</h2></a>
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-light"></i><h2 style="position:relative; margin:auto; left:18px; top:-23.2px; font-size:17px; color:white;">
+                    Menu</h2></a>
             </li>
         </ul>
 
