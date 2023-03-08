@@ -103,21 +103,26 @@
                                             <label for="" style="color:dimgray">Sex:</label>
                                             <input type="text" class="form-control" name="resp_sex">
                                         </div>
-                                        <div class="form-group">
+                                        {{-- <div class="form-group">
                                             <label for="" style="color:dimgray">Nature of Complaint:</label>
                                             <input type="text" class="form-control" name="nature_of_complaint">
-                                        </div>
+                                        </div> --}}
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label for="" style="color:dimgray">Actions Taken</label>
-                                            <textarea id="" type="text" class="form-control" title="" rows="5" required
-                                                name="actions_taken" placeholder="Write the actions taken"></textarea>
+                                            <label for="" style="color:dimgray">Nature of Complaint: </label>
+                                            <textarea id="" type="text" class="form-control" title="" rows="3" required
+                                                name="nature_of_complaint" placeholder="Write the nature of complaint..."></textarea>
                                         </div>
                                         <div class="form-group">
-                                            <label for="" style="color:dimgray">Recommendations</label>
+                                            <label for="" style="color:dimgray">Actions Taken: </label>
                                             <textarea id="" type="text" class="form-control" title="" rows="5" required
-                                                name="recommendations" placeholder="Write the recommendations"></textarea>
+                                                name="actions_taken" placeholder="Write the actions taken..."></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="" style="color:dimgray">Recommendations: </label>
+                                            <textarea id="" type="text" class="form-control" title="" rows="5" required
+                                                name="recommendations" placeholder="Write the recommendations..."></textarea>
                                         </div>
                                     </div>
 
