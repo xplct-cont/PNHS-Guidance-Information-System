@@ -10,7 +10,7 @@
             <strong>{{ $message }}</strong>
         </div>
     @endif
-    <div class="container elevation-4 mx-auto mt-3">
+    <div class="container col-md-9 elevation-4 mx-auto mt-3">
         <div class="d-flex justify-content-end">
             <a class="btn btn-danger mt-2 ml-2 mr-2" style=""
                 href="{{ route('export_one_case_pdf', $student_case->id) }}"><span class="fas fa-file-pdf"

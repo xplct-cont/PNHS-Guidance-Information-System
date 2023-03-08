@@ -1,9 +1,9 @@
 
-<aside class="main-sidebar sidebar-light elevation-0">
+<aside class="main-sidebar sidebar-light">
     <a href="{{ route('homepage') }}" class="brand-link bg-info">
         <img src="{{url('/images/image17.png')}}"
              alt="{{ config('app.name') }} Logo"
-             class="brand-image img-circle elevation-3">
+             class="brand-image ">
         <span class="brand-text font-weight-bold" style="color:whitesmoke;">PNHS SHS-GIS</span>
     </a>
 

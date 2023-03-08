@@ -704,7 +704,7 @@
             @method('PUT')
 
             <div class="row d-flex justify-content-center text-dark">
-                <div class="col-md-11 elevation-4 p-3 rounded  mt-2 bg-light mb-3">
+                <div class="col-md-10 elevation-4 p-3 rounded  mt-2 bg-light mb-3">
 
 
                     <a href="#" data-toggle="modal" id="stud_info_myS_delete_link" class="btn btn-danger btn-sm"

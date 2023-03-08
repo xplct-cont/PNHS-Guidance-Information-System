@@ -13,7 +13,7 @@
     @endif
 
     <div class="row d-flex justify-content-center text-dark">
-        <div class="col-md-11 elevation-4 p-3 rounded  mt-3 bg-light mb-3">
+        <div class="col-md-9 elevation-4 p-3 rounded  mt-3 bg-light mb-3">
 
             <div class="d-flex justify-content-end">
 
@@ -101,7 +101,7 @@
                                     value="{{ $student_wisd->reason_for_contact }}">
                             </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class="col-md-5">
                             <div class="form-group">
                                 <label for="" style="color:dimgray">Inquiries/Referral/Appointment:</label>
                                 <input type="text" class="form-control" name="inquiries_referral_appointment"
