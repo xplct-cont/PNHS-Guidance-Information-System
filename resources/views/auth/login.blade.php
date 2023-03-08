@@ -30,9 +30,9 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-                <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-                <![endif]-->
+                                    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                                    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                                    <![endif]-->
 
     </head>
 
@@ -46,18 +46,15 @@
                 </h3>
             </div>
 
-
             <div class="row justify-content-center">
                 <div class="col-md-6">
-
-
                     <div class="card shadow-lg rounded">
-                        <div class="card-header bg-dark shadow-lg rounded d-flex justify-content-between">
-                            <img src="/images/image17.png" class=" rounded-circle"
-                                style="height: 130px; margin:auto;">
+                        <div class="card-header bg-dark  rounded d-flex justify-content-between">
+                            <img src="/images/image17.png" class=" rounded-circle" style="height: 130px; margin:auto;">
                             <h3 class="text-center" style="font-size: 18px; margin:auto;color: white ">PANGANGAN NATIONAL
                                 HIGH SCHOOL <br>
-                                <p class="text-center" style="font-size: 15px; color: whitesmoke;">Talisay, Calape, Bohol
+                                <p class="text-center" style="font-size: 15px; color: rgb(220, 215, 215);">Talisay, Calape,
+                                    Bohol
                                 </p>
                             </h3>
 
