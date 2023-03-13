@@ -14,7 +14,10 @@ class AdviserHomePageController extends Controller
 
         $user = DB::table('users')->whereNotNull('approved_at')->count();   
         $admin = DB::table('users')->where('admin', '1')->count();
-
+        $student7 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 7%')->count();
+        $student8 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 8%')->count();
+        $student9 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 9%')->count();
+        $student10 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 10%')->count();
         $student11 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 11%')->count();
         $student12 = DB::table('students')->where('year_section' ,'LIKE', '%Grade 12%')->count();
 
@@ -32,7 +35,7 @@ class AdviserHomePageController extends Controller
             ->orderBy("advisory","asc")
             ->paginate(6);  
 
-        return view('adviserpage.adviser.homepage', compact('user', 'admin', 'student11', 'student12'),
+        return view('adviserpage.adviser.homepage', compact('user', 'admin', 'student7' , 'student8' , 'student9' , 'student10', 'student11', 'student12'),
         ['adviser' => $adviser])->with('i',(request()->input('page',1)-1)*5);
 
 
