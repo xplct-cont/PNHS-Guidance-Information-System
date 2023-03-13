@@ -31,6 +31,54 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
+                     <!-- ./col -->
+                     <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $student7 }}</h3>
+
+                                <p class="text-secondary">Grade 7 Students</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-users text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                     <!-- ./col -->
+                     <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $student8 }}</h3>
+
+                                <p class="text-secondary">Grade 8 Students</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-users text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                     <!-- ./col -->
+                     <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $student9 }}</h3>
+
+                                <p class="text-secondary">Grade 9 Students</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-users text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
                     <!-- ./col -->
                     <div class="col-lg-3 col-6">
                         <!-- small box -->
