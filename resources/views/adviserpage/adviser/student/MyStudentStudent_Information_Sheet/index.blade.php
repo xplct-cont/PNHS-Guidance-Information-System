@@ -135,7 +135,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="" style="color:dimgray">Date of Birth</label>
-                                        <input type="date" class="form-control" name="birthdate">
+                                        <input type="date" class="form-control" name="birthdate" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="" style="color:dimgray">Nationality</label>
@@ -675,7 +675,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="" style="color:dimgray">Date Signed</label>
-                                        <input type="date" class="form-control" name="date_signed">
+                                        <input type="date" class="form-control" name="date_signed" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="" style="color:dimgray">Student ID</label>
