@@ -283,7 +283,7 @@
 
         <div class="card d-flex justify-content-end col-md-12" style="padding:3px;">
 
-            <h2 style="color: dimgray; font-size:20px;" class="d-flex justify-content-between mb-3 mt-2 ">SHS ADVISERS
+            <h2 style="color: dimgray; font-size:20px;" class="d-flex justify-content-between mb-3 mt-2 ">List of Advisers
             </h2>
             <div class="mx-auto">
                 <a class="btn btn-danger mb-2 mr-2" style="" href="{{ route('export_advisers_pdf') }}"><span
