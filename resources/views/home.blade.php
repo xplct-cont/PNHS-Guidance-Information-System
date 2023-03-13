@@ -31,8 +31,8 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                     <!-- ./col -->
-                     <div class="col-lg-3 col-6">
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
                         <!-- small box -->
                         <div class="small-box bg-light text-secondary elevation-4">
                             <div class="inner">
@@ -47,8 +47,8 @@
                                     class="text-light"></span></a>
                         </div>
                     </div>
-                     <!-- ./col -->
-                     <div class="col-lg-3 col-6">
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
                         <!-- small box -->
                         <div class="small-box bg-light text-secondary elevation-4">
                             <div class="inner">
@@ -63,14 +63,30 @@
                                     class="text-light"></span></a>
                         </div>
                     </div>
-                     <!-- ./col -->
-                     <div class="col-lg-3 col-6">
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
                         <!-- small box -->
                         <div class="small-box bg-light text-secondary elevation-4">
                             <div class="inner">
                                 <h3>{{ $student9 }}</h3>
 
                                 <p class="text-secondary">Grade 9 Students</p>
+                            </div>
+                            <div class="icon">
+                                <i class="fas fa-users text-secondary"></i>
+                            </div>
+                            <a href="#" class="small-box-footer bg-info text-light"><span
+                                    class="text-light"></span></a>
+                        </div>
+                    </div>
+                    <!-- ./col -->
+                    <div class="col-lg-3 col-6">
+                        <!-- small box -->
+                        <div class="small-box bg-light text-secondary elevation-4">
+                            <div class="inner">
+                                <h3>{{ $student10 }}</h3>
+
+                                <p class="text-secondary">Grade 10 Students</p>
                             </div>
                             <div class="icon">
                                 <i class="fas fa-users text-secondary"></i>
@@ -360,8 +376,9 @@
                                             class="fas fa-user-edit text-dark"></i></a></td>
 
 
-                                <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell"><a href="#" data-toggle="modal" id="advisers_delete_link"
-                                        class="btn btn-danger btn-sm" data-target="#advisers_id{{ $item->id }}"><span
+                                <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell"><a href="#"
+                                        data-toggle="modal" id="advisers_delete_link" class="btn btn-danger btn-sm"
+                                        data-target="#advisers_id{{ $item->id }}"><span
                                             class=" fas fa-trash-alt"></span></a></td>
 
                                 <div class="modal fade" id="advisers_id{{ $item->id }}" tabindex="-1"
