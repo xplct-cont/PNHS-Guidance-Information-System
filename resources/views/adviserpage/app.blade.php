@@ -45,7 +45,7 @@
         <!-- Left navbar links -->
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-light"></i><h2 style="position:relative; margin:auto; left:18px; top:-23.1px; font-size:17px; color:white;">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars text-light"></i><h2 style="position:relative; margin:auto; left:18px; top:-22px; font-size:17px; color:white;">
                     Menu</h2></a>
             </li>
         </ul>
