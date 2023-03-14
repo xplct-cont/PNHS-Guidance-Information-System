@@ -75,7 +75,7 @@ h1{
   <h1>Pangangan National High School</h1>
   <p>Talisay, Calape, Bohol</p>
   <hr>
-  <h2>Senior High School Advisers</h2>
+  <h2>List of Advisers</h2>
 
 
  <table id="customers">

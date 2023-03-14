@@ -54,7 +54,7 @@
 
                             @foreach ($Adviser as $Adv)
                                 <div class="form-group">
-                                    <label for="" style="color:dimgray;">Adviser ID</label>
+                                    <label for="" style="color:dimgray;">Year/Section</label>
                                     <input type="text" name="year_section" class="form-control"
                                         value="{{ $Adv->advisory }}" readonly>
                                 </div>
