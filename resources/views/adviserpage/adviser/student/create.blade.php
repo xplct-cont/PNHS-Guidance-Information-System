@@ -11,7 +11,7 @@
 
             <h1 class="mb-3 mt-3"
                 style="color:whitesmoke; margin:auto; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px; color:dimgray;">
-                {{ Auth::user()->advisory }} Student</h1>
+                {{ Auth::user()->advisory }}</h1>
         </div>
         <div class="col-md-8 p-3 mt-3 rounded bg-light">
             @if ($message = Session::get('status'))
