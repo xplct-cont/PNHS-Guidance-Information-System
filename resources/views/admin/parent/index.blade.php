@@ -7,8 +7,11 @@
     </div>
 
     <h1 class="text-dark p-2 text-center"
-        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px;">Senior
-        High School List of Parents/Guardian</h1>
+        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px;">Pangangan National High School
+    </h1>
+    <p class="text-center"
+        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; color:dimgray; margin-top: -18px;">
+        Talisay, Calape, Bohol</p>
     <div class="div d-flex justify-content-end" style="position:relative; top: -10px;">
         {{ $Students11_12->onEachSide(1)->links() }}
     </div>
@@ -16,7 +19,7 @@
 
     <div class="d-flex justify-content-center">
         <h2 class="text-dark" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">List of
-            Parents in Grade 11 and Grade 12 </h2>
+            Parents/Guardians</h2>
     </div>
 
 

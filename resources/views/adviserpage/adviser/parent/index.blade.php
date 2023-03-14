@@ -1,8 +1,12 @@
 @extends('adviserpage.app')
 
 @section('content')
-    <h1 class="text-dark p-2 text-center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px;">Senior
-        High School List of Parents/Guardian</h1>
+    <h1 class="text-dark p-2 text-center"
+        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 25px;">Pangangan National High School
+    </h1>
+    <p class="text-center"
+        style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 15px; color:dimgray; margin-top: -18px;">
+        Talisay, Calape, Bohol</p>
     <div class="div d-flex justify-content-end" style="position:relative; top: -10px;">
         {{ $parentLists->onEachSide(1)->links() }}
     </div>
@@ -10,7 +14,7 @@
 
     <div class="d-flex justify-content-center">
         <h2 class="text-dark" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">List of
-            Parents in {{Auth::user()->advisory}}</h2>
+            Parents in {{ Auth::user()->advisory }}</h2>
     </div>
 
 
@@ -24,8 +28,8 @@
                             <span class="fas fa-search"></span>
                         </button>
                     </span>
-                    <input type="text" class="form-control mr-2" name="my_students"
-                        placeholder="Search All Student Name" id="my_students">
+                    <input type="text" class="form-control mr-2" name="my_students" placeholder="Search All Student Name"
+                        id="my_students">
                     <a href="{{ route('parent-lists') }}" class=" mt-0">
                         <span class="input-group-btn">
                             <button class="btn btn-danger" type="button" title="Refresh page">
