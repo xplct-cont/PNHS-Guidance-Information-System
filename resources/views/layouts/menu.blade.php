@@ -63,7 +63,7 @@ $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('se
 @php
     $advisers = DB::table('users')
         ->where('approved_at', '!=', null)
-        ->orderBy('advisory')
+        ->sortByDesc('advisory')
         ->get();
 @endphp
 <div class="text-white text-center " style="padding:5px; font-size:15px; background-color:rgb(76, 76, 76);">All Sections
