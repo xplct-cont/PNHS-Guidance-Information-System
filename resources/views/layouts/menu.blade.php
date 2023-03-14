@@ -27,7 +27,7 @@
 
 <li class="nav-item">
     <a href="{{ route('shs-parents') }}" class="nav-link {{ Request::is('shs-parents') ? 'bg-info active' : '' }}">
-        <p class="text-white">Parent/Guardian</p>
+        <p class="text-white">Parents/Guardians</p>
         <i class="fas fa-user fa-pull-left fa-md text-white"></i>
     </a>
 </li>

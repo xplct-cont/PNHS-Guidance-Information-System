@@ -28,7 +28,7 @@
 
 <li class="nav-item">
     <a href="{{ route('parent-lists') }}" class="nav-link {{ Request::is('parent-lists*') ? 'bg-info active' : '' }}">
-        <p class="text-white">Parent/Guardian</p>
+        <p class="text-white">Parents/Guardians</p>
         <i class="fas fa-user fa-pull-left fa-md text-white"></i>
     </a>
 </li>

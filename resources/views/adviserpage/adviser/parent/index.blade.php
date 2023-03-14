@@ -14,7 +14,7 @@
 
     <div class="d-flex justify-content-center">
         <h2 class="text-dark" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">List of
-            Parents in {{ Auth::user()->advisory }}</h2>
+            Parents/Guardians in {{ Auth::user()->advisory }}</h2>
     </div>
 
 
