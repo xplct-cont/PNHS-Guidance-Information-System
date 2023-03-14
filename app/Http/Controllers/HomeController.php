@@ -132,12 +132,12 @@ class HomeController extends Controller
             $pdf = PDF::loadVIew('pdf.users', [
                 'users' => $adviser
             ]);
-            return $pdf->download('PNHS SHS Advisers.pdf');
+            return $pdf->download('List of Advisers.pdf');
         }
         
         public function export_advisers_excel(){
              $adviser = User::whereNotNull('approved_at')->get();
-             return Excel::download(new AdvisersExport($adviser),'PNHS SHS Advisers.xlsx');
+             return Excel::download(new AdvisersExport($adviser),'List of Advisers.xlsx');
         }
     
 }
