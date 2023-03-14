@@ -72,10 +72,10 @@ $bells = DB::table('ch_messages')->where('to_id', auth()->user()->id)->where('se
     <tbody>
         @foreach ($advisers as $teachers)
             <tr>
-                <td class="text-light"><a class="text-light" style="margin-left: -15px;"
+                <td class="text-light"><a class="text-light" style="margin-left: -15px; font-size: 14px;"
                         href="{{ url('advisory-list/' . $teachers->id) }}">{{ $teachers->advisory }}<i
                             class="fas fa-users fa-pull-left fa-md "
-                            style="margin-left: 10px; margin-right: 25px;"></i></a></td>
+                            style="margin-left: 10px; font-size: 14px; margin-right: 25px;"></i></a></td>
 
             </tr>
         @endforeach
