@@ -27,17 +27,7 @@
             integrity="sha512-8vq2g5nHE062j3xor4XxPeZiPjmRDh6wlufQlfC6pdQ/9urJkU07NM0tEREeymP++NczacJ/Q59ul+/K2eYvcg=="
             crossorigin="anonymous" />
 
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-                <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-                <![endif]-->
-
     </head>
-
-
     <body>
 
         @if ($message = Session::get('status'))
@@ -78,20 +68,20 @@
 
                         <div class="input-group mb-3">
                             <label for="" style="color:dimgray;"><span
-                                    class="fas fa-user input-group-text bg-secondary" style="width: 43px;"></span></label>
+                                    class="input-group-text bg-secondary" style="width: 90px;">Name</span></label>
                             <input type="text" name="name" value="{{ $adviser->name }}" class="form-control" required>
                         </div>
 
                         <div class="input-group mb-3">
                             <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
-                                    style="width: 43px;">ID</span></label>
+                                    style="width: 90px;">Adviser ID</span></label>
                             <input type="text" name="adviser_id" value="{{ $adviser->adviser_id }}" class="form-control"
                                 required>
                         </div>
 
                         <div class="input-group mb-3">
                             <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
-                                    style="width: 43px;">As</span></label>
+                                    style="width: 90px;">Advisory</span></label>
                             <input type="text" name="advisory" value="{{ $adviser->advisory }}" class="form-control"
                                 required>
                         </div>
@@ -99,22 +89,22 @@
 
                         <div class="input-group mb-3">
                             <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
-                                    style="width: 43px;">Pn</span></label>
+                                    style="width: 90px;">Phone No.</span></label>
                             <input type="text" name="contact_no" value="{{ $adviser->contact_no }}" class="form-control"
                                 required>
                         </div>
 
                         <div class="input-group mb-3">
                             <label for="" style="color:dimgray;"><span
-                                    class="fas fa-envelope input-group-text bg-secondary"
-                                    style="width: 43px;"></span></label>
+                                    class=" input-group-text bg-secondary"
+                                    style="width: 90px;">Email Ad.</span></label>
                             <input type="text" name="email" value="{{ $adviser->email }}" class="form-control"
                                 required>
                         </div>
 
                         <div class="input-group mb-3">
                             <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
-                                    style="width: 55px;">Role</span></label>
+                                    style="width: 90px;">Password</span></label>
                             <input type="text" name="admin"
                                 value="{{ $adviser->admin ? 'Administrator' : 'Adviser' }}" class="form-control" readonly>
                         </div>
