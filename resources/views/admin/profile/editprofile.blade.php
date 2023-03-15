@@ -95,15 +95,15 @@
 
 
                     <div class="input-group mb-3">
-                        <label for="" style="color:dimgray;"><span class="fas fa-user input-group-text bg-secondary"
-                                style="width: 43px;"></span></label>
+                        <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
+                                style="width: 90px;">Name</span></label>
                         <input type="text" name="name" value="{{ $user->name }}" class="form-control" required>
                     </div>
 
 
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
-                                style="width: 43px;">ID</span></label>
+                                style="width: 90px;">Adviser ID</span></label>
                         <input type="text" name="adviser_id" value="{{ $user->adviser_id }}" class="form-control"
                             required>
                     </div>
@@ -111,21 +111,21 @@
 
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
-                                style="width: 43px;">As</span></label>
+                                style="width: 90px;">Advisory</span></label>
                         <input type="text" name="advisory" value="{{ $user->advisory }}" class="form-control" required>
                     </div>
 
 
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
-                                style="width: 43px;">Pn</span></label>
+                                style="width: 90px;">Phone No.</span></label>
                         <input type="text" name="contact_no" value="{{ $user->contact_no }}" class="form-control"
                             required>
                     </div>
 
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span
-                                class="fas fa-envelope input-group-text bg-secondary" style="width: 43px;"></span></label>
+                                class=" input-group-text bg-secondary" style="width: 90px;">Email Ad.</span></label>
                         <input type="text" name="email" value="{{ $user->email }}" class="form-control" required>
                     </div>
 

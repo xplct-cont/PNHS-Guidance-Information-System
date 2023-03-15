@@ -28,10 +28,11 @@
             crossorigin="anonymous" />
 
     </head>
+
     <body>
 
         @if ($message = Session::get('status'))
-            <div class="alert alert-success alert-block">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
                 <button type="button" class="close" data-dismiss="alert" style="color:black;">×</button>
                 <strong>{{ $message }}</strong>
             </div>
@@ -67,8 +68,8 @@
 
 
                         <div class="input-group mb-3">
-                            <label for="" style="color:dimgray;"><span
-                                    class="input-group-text bg-secondary" style="width: 90px;">Name</span></label>
+                            <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
+                                    style="width: 90px;">Name</span></label>
                             <input type="text" name="name" value="{{ $adviser->name }}" class="form-control" required>
                         </div>
 
@@ -95,21 +96,11 @@
                         </div>
 
                         <div class="input-group mb-3">
-                            <label for="" style="color:dimgray;"><span
-                                    class=" input-group-text bg-secondary"
+                            <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
                                     style="width: 90px;">Email Ad.</span></label>
                             <input type="text" name="email" value="{{ $adviser->email }}" class="form-control"
                                 required>
                         </div>
-
-                        <div class="input-group mb-3">
-                            <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
-                                    style="width: 90px;">Password</span></label>
-                            <input type="text" name="admin"
-                                value="{{ $adviser->admin ? 'Administrator' : 'Adviser' }}" class="form-control" readonly>
-                        </div>
-
-
                         <p class="text-center" style="color: dimgray; font-weight: 500"><span
                                 class="fas fa-exclamation-triangle text-danger"></span> Select Role</p>
                         <div class="form-group text-dark d-flex justify-content-center">
@@ -151,4 +142,9 @@
 
     <style scoped>
     </style>
+    <script>
+        setTimeout(function() {
+            $(' .alert-dismissible').fadeOut('slow');
+        }, 1000);
+    </script>
 @endsection

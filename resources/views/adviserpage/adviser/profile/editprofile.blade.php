@@ -31,9 +31,9 @@
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-            <![endif]-->
+                                <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+                                <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                                <![endif]-->
 
     </head>
 
@@ -91,14 +91,14 @@
 
 
                     <div class="input-group mb-3">
-                        <label for="" style="color:dimgray;"><span class="fas fa-user input-group-text bg-secondary"
-                                style="width: 43px;"></span></label>
+                        <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
+                                style="width: 90px;">Name</span></label>
                         <input type="text" name="name" value="{{ $user->name }}" class="form-control" required>
                     </div>
 
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
-                                style="width: 43px;">ID</span></label>
+                                style="width: 90px;">Adviser ID</span></label>
                         <input type="text" name="adviser_id" value="{{ $user->adviser_id }}" class="form-control"
                             required>
                     </div>
@@ -106,21 +106,21 @@
 
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
-                                style="width: 43px;">As</span></label>
+                                style="width: 90px;">Advisory</span></label>
                         <input type="text" name="advisory" value="{{ $user->advisory }}" class="form-control" required>
                     </div>
 
 
                     <div class="input-group mb-3">
                         <label for="" style="color:dimgray;"><span class="input-group-text bg-secondary"
-                                style="width: 43px;">Pn</span></label>
+                                style="width: 90px;">Phone No.</span></label>
                         <input type="text" name="contact_no" value="{{ $user->contact_no }}" class="form-control"
                             required>
                     </div>
 
                     <div class="input-group mb-3">
-                        <label for="" style="color:dimgray;"><span
-                                class="fas fa-envelope input-group-text bg-secondary" style="width: 43px;"></span></label>
+                        <label for="" style="color:dimgray;"><span class=" input-group-text bg-secondary"
+                                style="width: 90px;">Email Ad.</span></label>
                         <input type="text" name="email" value="{{ $user->email }}" class="form-control" required>
                     </div>
 
@@ -132,17 +132,12 @@
 
                     </div>
                 </form>
-
-
-
             </div>
-
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.5/js/adminlte.min.js"
             integrity="sha512-++c7zGcm18AhH83pOIETVReg0dr1Yn8XTRw+0bWSIWAVCAwz1s2PwnSj4z/OOyKlwSXc4RLg3nnjR22q0dhEyA=="
             crossorigin="anonymous"></script>
-
 
     </body>
 
