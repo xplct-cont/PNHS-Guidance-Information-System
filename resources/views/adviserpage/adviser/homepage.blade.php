@@ -207,7 +207,7 @@
                             </td>
                             <td>{{ $item->advisory }}</td>
                             <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">
-                                {{ $item->admin ? 'Guidance Designate' : 'Adviser' }}</td>
+                                {{ $item->admin ? 'Administrator' : 'Adviser' }}</td>
                             <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">{{ $item->contact_no }}
                             </td>
                             <td class="d-none d-md-table-cell d-lg-table-cell d-xl-table-cell">{{ $item->email }}
