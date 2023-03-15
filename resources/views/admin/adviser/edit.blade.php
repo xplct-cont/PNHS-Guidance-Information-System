@@ -53,7 +53,9 @@
 
                 </div>
                 <p class="text-center" style="position:absolute;  top: 260px; color:black">{{ $adviser->advisory }} </p>
+
             </div>
+
 
             <div class="col-md-6 text-dark mx-auto">
 
@@ -118,23 +120,61 @@
                             </div>
                         </div>
 
+                        <a href="#" data-toggle="modal" id="adviser_edit_link" class="btn-sm bg-danger"
+                            style="padding-top:5px; padding-bottom:5px; font-size: 15px;"
+                            data-target="#adviser_id{{ $adviser->id }}"><span class="fas fa-key"
+                                style="font-size: 15px;"></span> Change Password</a>
+
                         <div class="mb-3">
                             <button type="submit" class="btn btn-success float-right btn-sm mb-3"><span
                                     class="fas fa-save"></span> Save Changes</button>
 
                         </div>
                     </form>
-
-
-
                 </div>
 
+                <div class="modal fade" id="adviser_id{{ $adviser->id }}" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-md" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" method="POST" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('PUT')
+
+                                    <div class="container mx-auto">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="" style="color:dimgray; font-weight: 400">
+                                                        <span class="fas fa-exclamation-triangle text-danger"></span>
+                                                        Changing Password of {{ $adviser->name }}!</label>
+                                                    <input type="text" class="form-control" name="password" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success"><span class="fas fa-save"></span>
+                                    Save changes</button>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.5/js/adminlte.min.js"
                 integrity="sha512-++c7zGcm18AhH83pOIETVReg0dr1Yn8XTRw+0bWSIWAVCAwz1s2PwnSj4z/OOyKlwSXc4RLg3nnjR22q0dhEyA=="
                 crossorigin="anonymous"></script>
-
 
     </body>
 
