@@ -140,6 +140,14 @@ class HomeController extends Controller
              return Excel::download(new AdvisersExport($adviser),'List of Advisers.xlsx');
         }
     
+        public function update_adviser_pass(Request $request, $id){
+            $adviser = User::find($id);
+          
+            $adviser->password = Hash::make($request->input('password'));
+           
+            $adviser->update();
+            return redirect()->back()->with('status', 'Password Updated Successfully!');
+        }
 }
    
 

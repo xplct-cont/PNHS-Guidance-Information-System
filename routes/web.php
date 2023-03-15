@@ -81,6 +81,8 @@ Route::middleware(['auth', ])->group(function () {
             HomeController::class, 'edit']);
         Route::put('/update-adviser/{id}', [
             HomeController::class, 'update']);
+        Route::put('/update-adviser-pass/{id}', [
+            HomeController::class, 'update_adviser_pass']);
 
 
             //for PDF and Excel Advisers

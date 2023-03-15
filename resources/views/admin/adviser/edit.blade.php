@@ -144,7 +144,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <form action="" method="POST" enctype="multipart/form-data">
+                                <form action="{{url('update-adviser-pass/' .$adviser->id)}}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
 
@@ -154,7 +154,7 @@
                                                 <div class="form-group">
                                                     <label for="" style="color:dimgray; font-weight: 400">
                                                         <span class="fas fa-exclamation-triangle text-danger"></span>
-                                                        Changing Password of {{ $adviser->name }}!</label>
+                                                        Changing of {{ $adviser->name }}'s password!</label>
                                                     <input type="text" class="form-control" name="password" required>
                                                 </div>
                                             </div>
