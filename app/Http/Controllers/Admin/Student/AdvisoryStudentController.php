@@ -175,7 +175,7 @@ class AdvisoryStudentController extends Controller
         ]);
 
 
-            Mail::send('admin.student.Wisdom.Email.email', ['content' => $request->content, 'subject' => $request->subject], function($mails) use($request){
+            Mail::send('admin.student.Students.Email.email', ['content' => $request->content, 'subject' => $request->subject], function($mails) use($request){
                 $mails->to($request->email);
                 $mails->subject($request->subject);
           
